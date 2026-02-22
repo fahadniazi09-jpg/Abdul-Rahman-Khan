@@ -13,13 +13,16 @@
         .card-style { background: #ffffff; border: 1px solid #e2e8f0; transition: 0.3s; }
         .card-style:hover { border-color: #2563eb; transform: translateY(-5px); box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1); }
         .star-color { color: #2563eb; }
-        .admin-reply { background: #f0f9ff; border-left: 4px solid #2563eb; padding: 12px; border-radius: 8px; font-size: 0.85rem; margin-top: 10px; text-align: left; color: #1e3a8a; }
         .star-rating i { cursor: pointer; transition: 0.2s; }
+        .faq-card { background: #ffffff; border: 1.5px solid #f1f5f9; padding: 20px; border-radius: 15px; }
+        /* Submit Button Styling */
+        .btn-submit { background-color: #1e3a8a; color: #ffffff; transition: 0.3s; }
+        .btn-submit:hover { background-color: #172554; transform: scale(1.02); }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-blue-50">
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-blue-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-black text-blue-900 tracking-tighter italic">AR<span class="accent-blue text-3xl">.</span></h1>
             <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-slate-500">
@@ -51,19 +54,27 @@
     <section id="experience" class="py-24 bg-white px-6">
         <div class="max-w-7xl mx-auto text-center">
             <h2 class="text-3xl font-black uppercase italic text-slate-900 mb-12">Experience & Expertise</h2>
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid md:grid-cols-2 gap-8 text-left">
                 <div class="card-style p-10 rounded-2xl">
-                    <div class="bg-blue-50 w-12 h-12 flex items-center justify-center rounded-lg mx-auto mb-6 accent-blue text-2xl"><i class="fas fa-layer-group"></i></div>
                     <h3 class="text-xl font-black mb-4 uppercase">Design Tools</h3>
                     <ul class="text-slate-600 space-y-2 font-medium">
-                        <li>Adobe Photoshop / Illustrator / Figma</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Adobe Photoshop</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Adobe Illustrator</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Basic Figma</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Adobe XD</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Adobe After Effects (Basic)</li>
                     </ul>
                 </div>
                 <div class="card-style p-10 rounded-2xl">
-                    <div class="bg-blue-600 w-12 h-12 flex items-center justify-center rounded-lg mx-auto mb-6 text-white text-2xl"><i class="fas fa-palette"></i></div>
                     <h3 class="text-xl font-black mb-4 uppercase">Design Skills</h3>
                     <ul class="text-slate-600 space-y-2 font-medium">
-                        <li>Branding / Social Media / Flyers</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Creative Visual Design</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Social Media Graphics</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Banner Design</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Instagram Thumbnail Design</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Flyer Design</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Branding & Identity Design</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Basic Video Editing</li>
                     </ul>
                 </div>
             </div>
@@ -81,32 +92,35 @@
                 <select id="cust-service" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-blue-500 mb-6">
                     <option>Social Media Graphics</option>
                     <option>Banner Design</option>
-                    <option>Logo Design</option>
+                    <option>Instagram Thumbnail Design</option>
+                    <option>Flyer Design</option>
+                    <option>Branding & Identity</option>
+                    <option>Video Editing (Basic)</option>
                 </select>
                 <textarea id="cust-details" rows="4" placeholder="Describe your requirements..." class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-blue-500 mb-6"></textarea>
                 
-                <button onclick="sendToWhatsApp()" class="w-full bg-[#25D366] text-white py-5 rounded-xl font-bold uppercase tracking-widest hover:opacity-90 transition flex justify-center items-center gap-3">
-                    <i class="fab fa-whatsapp text-2xl"></i> Send Inquiry via WhatsApp
+                <button onclick="sendToWhatsApp()" class="w-full btn-submit py-5 rounded-xl font-black uppercase tracking-widest shadow-lg">
+                    SUBMIT
                 </button>
             </div>
         </div>
     </section>
 
-    <section id="faq-section" class="py-24 bg-blue-50/30 px-6">
+    <section id="faq-section" class="py-24 bg-white px-6">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-black uppercase italic text-center mb-12">Common Questions (Q&A)</h2>
+            <h2 class="text-3xl font-black uppercase italic text-center text-slate-900 mb-12">Questions & Answers</h2>
             <div class="space-y-6">
-                <div class="bg-white p-6 rounded-xl border border-blue-100">
-                    <h4 class="font-bold text-blue-600 mb-2">Q: Project kitne time mein mil jaye ga?</h4>
-                    <p class="text-slate-600 text-sm">A: Normal design 24 se 48 ghanto mein deliver ho jata hai, depend karta hai kaam kitna hai.</p>
+                <div class="faq-card">
+                    <h4 class="font-bold text-black mb-2">Q: Project kitne time mein mil jaye ga?</h4>
+                    <p class="text-black text-sm">A: Normal design 24 se 48 ghanto mein deliver ho jata hai, baqi kaam ki complexity pe depend karta hai.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl border border-blue-100">
-                    <h4 class="font-bold text-blue-600 mb-2">Q: Do you offer unlimited revisions?</h4>
-                    <p class="text-slate-600 text-sm">A: Yes, jab tak aap satisfy nahi hotay, main changes karta rehta hoon.</p>
+                <div class="faq-card">
+                    <h4 class="font-bold text-black mb-2">Q: Do you offer unlimited revisions?</h4>
+                    <p class="text-black text-sm">A: G bilkul, jab tak aap apne design se 100% mutmain (satisfied) nahi hotay, main changes karta rahoon ga.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl border border-blue-100">
-                    <h4 class="font-bold text-blue-600 mb-2">Q: Source file mile gi design ki?</h4>
-                    <p class="text-slate-600 text-sm">A: Bilkul, aapko original Illustrator ya Photoshop file bhi di jaye gi.</p>
+                <div class="faq-card">
+                    <h4 class="font-bold text-black mb-2">Q: Source file mile gi design ki?</h4>
+                    <p class="text-black text-sm">A: Ji haan, aapko final design ke sath original PSD ya AI source file bhi di jaye gi.</p>
                 </div>
             </div>
         </div>
@@ -123,7 +137,7 @@
                 </div>
                 <div class="card-style p-8 rounded-2xl">
                     <div class="mb-4 text-xs star-color"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-slate-600 italic mb-4 text-sm">"Professional quality and very creative. Highly recommended for branding."</p>
+                    <p class="text-slate-600 italic mb-4 text-sm">"Professional quality and very creative. Best designer I have worked with."</p>
                     <span class="font-bold text-slate-900 text-[10px] uppercase tracking-widest">- Sara Khan</span>
                 </div>
                 <div class="card-style p-8 rounded-2xl">
@@ -133,9 +147,9 @@
                 </div>
             </div>
 
-            <div class="max-w-xl mx-auto bg-blue-50/50 p-8 rounded-3xl border border-blue-100">
-                <h4 class="font-black mb-6 uppercase text-sm accent-blue tracking-widest">Post a Review</h4>
-                <div class="space-y-4 text-left">
+            <div class="max-w-xl mx-auto bg-blue-50/50 p-8 rounded-3xl border border-blue-100 text-left">
+                <h4 class="font-black mb-6 uppercase text-sm accent-blue tracking-widest text-center">Post a Review</h4>
+                <div class="space-y-4">
                     <input type="text" id="rev-name" placeholder="Name" class="w-full p-3 bg-white border rounded-lg outline-none focus:border-blue-500">
                     <div class="flex flex-col items-center py-2">
                         <div class="star-rating flex gap-2 text-2xl text-slate-300" id="star-box">
@@ -150,7 +164,7 @@
         </div>
     </section>
 
-    <footer class="py-16 bg-blue-900 text-white text-center">
+    <footer class="py-16 bg-blue-950 text-white text-center">
         <h2 class="text-3xl font-black italic mb-6 tracking-tighter uppercase">ABDUL <span class="accent-blue">RAHMAN</span></h2>
         <div class="flex justify-center gap-8 mb-10 text-2xl">
             <a href="https://wa.me/923065166406" class="hover:text-blue-400 transition"><i class="fab fa-whatsapp"></i></a>
@@ -187,13 +201,10 @@
         function postReview() {
             const name = document.getElementById('rev-name').value;
             const text = document.getElementById('rev-text').value;
-            const rate = ratingVal.value;
             if(!name || !text) return alert("Fields cannot be empty!");
-            
             const list = document.getElementById('reviews-list');
             let starH = "";
-            for(let j=1; j<=5; j++) starH += `<i class="fas fa-star ${j <= rate ? 'star-color' : 'text-slate-100'}"></i>`;
-            
+            for(let j=1; j<=5; j++) starH += `<i class="fas fa-star ${j <= ratingVal.value ? 'star-color' : 'text-slate-200'}"></i>`;
             list.innerHTML += `
                 <div class="card-style p-8 rounded-2xl text-center">
                     <div class="mb-4 text-xs">${starH}</div>
