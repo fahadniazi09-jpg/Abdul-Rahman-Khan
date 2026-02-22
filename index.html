@@ -11,19 +11,21 @@
         .nav-link { transition: 0.3s; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
         .nav-link:hover { color: #2563eb; }
         .hero-section { min-height: 80vh; display: flex; align-items: center; }
-        .skill-card { border: 1px solid #f1f5f9; padding: 2rem; border-radius: 1.5rem; transition: 0.3s; height: 100%; }
+        .skill-card { border: 1px solid #f1f5f9; padding: 2rem; border-radius: 1.5rem; transition: 0.3s; }
         .skill-card:hover { border-color: #2563eb; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(37, 99, 235, 0.05); }
-        .btn-submit { background-color: #1e3a8a; color: white; padding: 1.25rem; border-radius: 0.75rem; font-weight: 900; letter-spacing: 0.1em; transition: 0.3s; width: 100%; }
+        .btn-submit { background-color: #1e3a8a; color: white; padding: 1.25rem; border-radius: 0.75rem; font-weight: 900; letter-spacing: 0.1em; transition: 0.3s; width: 100%; text-align: center; cursor: pointer; border: none; }
         .btn-submit:hover { background-color: #172554; transform: translateY(-2px); }
         .faq-item { border-bottom: 1px solid #f1f5f9; padding: 1.5rem 0; }
-        .star-active { color: #2563eb; }
+        .profile-img-container { position: relative; width: 100%; max-width: 450px; margin: 0 auto; }
+        .profile-img-container img { width: 100%; border-radius: 2.5rem; border: 10px solid #ffffff; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); transition: 0.5s; }
+        .profile-img-container img:hover { transform: scale(1.02); }
     </style>
 </head>
 <body>
 
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="text-2xl font-black italic tracking-tighter">AR<span class="text-blue-600">.</span></div>
+            <div class="text-2xl font-black italic tracking-tighter text-slate-900">AR<span class="text-blue-600">.</span></div>
             <div class="hidden md:flex space-x-10">
                 <a href="#about" class="nav-link text-gray-500">About</a>
                 <a href="#skills" class="nav-link text-gray-500">Expertise</a>
@@ -33,21 +35,22 @@
         </div>
     </nav>
 
-    <section id="about" class="hero-section pt-20 px-6">
+    <section id="about" class="hero-section pt-32 pb-20 px-6 bg-white">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <h2 class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4">Professional Graphic Designer</h2>
                 <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-tight mb-6">Abdul <br>Rahman.</h1>
-                <p class="text-lg text-slate-600 max-w-md italic mb-8">
+                <p class="text-lg text-slate-600 max-w-md italic mb-8 leading-relaxed">
                     "I transform ideas into high-impact visual stories. Specialized in brand identity and social media excellence."
                 </p>
                 <div class="flex gap-4">
-                    <a href="#contact" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition">Work With Me</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100">Work With Me</a>
                     <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" target="_blank" class="border border-slate-200 px-8 py-4 rounded-full font-bold hover:bg-slate-50 transition">LinkedIn</a>
                 </div>
             </div>
-            <div class="relative">
-                <img src="abdul.jpg" onerror="this.src='https://via.placeholder.com/500x600?text=Abdul+Rahman'" class="rounded-[3rem] shadow-2xl grayscale hover:grayscale-0 transition duration-500 border-8 border-white">
+            
+            <div class="profile-img-container">
+                <img src="abdul.jpg" alt="Abdul Rahman" onerror="this.src='https://via.placeholder.com/500x600?text=Abdul+Rahman+Photo'">
             </div>
         </div>
     </section>
@@ -59,85 +62,37 @@
                 <div class="skill-card bg-white">
                     <h3 class="text-blue-600 font-black uppercase text-xs tracking-widest mb-6">Design Tools</h3>
                     <ul class="space-y-4 font-bold text-slate-700">
-                        <li><i class="fas fa-caret-right mr-2 text-blue-600"></i> Adobe Photoshop</li>
-                        <li><i class="fas fa-caret-right mr-2 text-blue-600"></i> Adobe Illustrator</li>
-                        <li><i class="fas fa-caret-right mr-2 text-blue-600"></i> Basic Figma</li>
-                        <li><i class="fas fa-caret-right mr-2 text-blue-600"></i> Adobe XD</li>
-                        <li><i class="fas fa-caret-right mr-2 text-blue-600"></i> Adobe After Effects (Basic)</li>
+                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Adobe Photoshop</li>
+                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Adobe Illustrator</li>
+                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Basic Figma</li>
+                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Adobe XD</li>
+                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Adobe After Effects (Basic)</li>
                     </ul>
                 </div>
                 <div class="skill-card bg-white">
                     <h3 class="text-blue-600 font-black uppercase text-xs tracking-widest mb-6">Design Skills</h3>
                     <ul class="space-y-4 font-bold text-slate-700">
-                        <li><i class="fas fa-caret-right mr-2 text-blue-600"></i> Creative Visual Design</li>
-                        <li><i class="fas fa-caret-right mr-2 text-blue-600"></i> Social Media & Thumbnails</li>
-                        <li><i class="fas fa-caret-right mr-2 text-blue-600"></i> Branding & Identity</li>
-                        <li><i class="fas fa-caret-right mr-2 text-blue-600"></i> Flyer & Banner Design</li>
-                        <li><i class="fas fa-caret-right mr-2 text-blue-600"></i> Basic Video Editing</li>
+                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Social Media & Thumbnails</li>
+                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Branding & Identity</li>
+                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Flyer & Banner Design</li>
+                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Basic Video Editing</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-6 bg-white">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-black text-center uppercase italic mb-12 text-black">Common Questions</h2>
-            <div class="faq-item">
-                <h4 class="font-bold text-black mb-1">Q: Project kitne time mein mil jaye ga?</h4>
-                <p class="text-slate-600 text-sm">A: Normal design 24 se 48 ghanto mein mil jata hai. Delivery hamesha time par ho gi.</p>
-            </div>
-            <div class="faq-item">
-                <h4 class="font-bold text-black mb-1">Q: Do you offer unlimited revisions?</h4>
-                <p class="text-slate-600 text-sm">A: G bilkul, jab tak aap apne design se 100% mutmain nahi hotay, main kaam karta rahoon ga.</p>
-            </div>
-            <div class="faq-item border-none">
-                <h4 class="font-bold text-black mb-1">Q: Source file mile gi design ki?</h4>
-                <p class="text-slate-600 text-sm">A: Ji haan, Photoshop (PSD) ya Illustrator (AI) ki original files aapko di jayen gi.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-24 bg-slate-50 px-6">
+    <section id="contact" class="py-24 bg-white px-6">
         <div class="max-w-2xl mx-auto">
             <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100">
                 <h2 class="text-3xl font-black text-center uppercase italic mb-8">Hire Me</h2>
                 <div class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-4">
-                        <input type="text" id="name" placeholder="Name" class="w-full p-4 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
-                        <input type="tel" id="phone" placeholder="Phone" class="w-full p-4 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+                        <input type="text" id="name" placeholder="Full Name" class="w-full p-4 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+                        <input type="tel" id="phone" placeholder="Phone Number" class="w-full p-4 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
                     </div>
-                    <select id="service" class="w-full p-4 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
-                        <option>Social Media Design</option>
-                        <option>Logo & Branding</option>
-                        <option>Thumbnail Design</option>
-                        <option>Other</option>
-                    </select>
-                    <textarea id="msg" rows="4" placeholder="Project Details" class="w-full p-4 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
-                    <button onclick="orderNow()" class="btn-submit">SUBMIT</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="reviews" class="py-24 px-6 bg-white">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl font-black uppercase italic mb-16">Client Feedback</h2>
-            <div class="grid md:grid-cols-3 gap-8 mb-16">
-                <div class="p-8 border border-slate-100 rounded-3xl">
-                    <div class="text-blue-600 mb-4 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-slate-600 italic text-sm mb-4">"Bhai ka kaam bohat hi zabardast hai! Design bohat hi clean tha."</p>
-                    <span class="font-black text-[10px] uppercase tracking-tighter text-slate-400">- Usman Ali</span>
-                </div>
-                <div class="p-8 border border-slate-100 rounded-3xl">
-                    <div class="text-blue-600 mb-4 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-slate-600 italic text-sm mb-4">"Very professional and quick delivery. Highly recommended!"</p>
-                    <span class="font-black text-[10px] uppercase tracking-tighter text-slate-400">- Maria Khan</span>
-                </div>
-                <div class="p-8 border border-slate-100 rounded-3xl">
-                    <div class="text-blue-600 mb-4 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-slate-600 italic text-sm mb-4">"Design bohat pyara banaya hai, shukriya Abdul Rahman!"</p>
-                    <span class="font-black text-[10px] uppercase tracking-tighter text-slate-400">- Hamza Sheikh</span>
+                    <textarea id="msg" rows="4" placeholder="Briefly explain your project..." class="w-full p-4 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+                    <button onclick="orderNow()" class="btn-submit uppercase tracking-widest">SUBMIT</button>
                 </div>
             </div>
         </div>
@@ -149,17 +104,16 @@
             <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" class="hover:text-blue-600 transition"><i class="fab fa-linkedin"></i></a>
             <a href="mailto:abdulrahmanniazi1234@gmail.com" class="hover:text-blue-600 transition"><i class="fas fa-envelope"></i></a>
         </div>
-        <p class="text-[9px] font-bold uppercase tracking-[0.4em] text-slate-300">© 2026 ABDUL RAHMAN PORTFOLIO</p>
+        <p class="text-[9px] font-bold uppercase tracking-[0.4em] text-slate-300 italic">© 2026 ABDUL RAHMAN | MINIMAL PORTFOLIO</p>
     </footer>
 
     <script>
         function orderNow() {
             const n = document.getElementById('name').value;
             const p = document.getElementById('phone').value;
-            const s = document.getElementById('service').value;
             const m = document.getElementById('msg').value;
-            if(!n || !p || !m) return alert("Fill all fields");
-            const text = `*PORTFOLIO INQUIRY*%0A%0A*Name:* ${n}%0A*Phone:* ${p}%0A*Service:* ${s}%0A*Message:* ${m}`;
+            if(!n || !p || !m) return alert("Please fill all details!");
+            const text = `*PORTFOLIO INQUIRY*%0A%0A*Name:* ${n}%0A*Phone:* ${p}%0A*Message:* ${m}`;
             window.open(`https://wa.me/923065166406?text=${text}`, '_blank');
         }
     </script>
