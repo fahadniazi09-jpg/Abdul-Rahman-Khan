@@ -3,133 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdul Rahman | Visual Storyteller</title>
+    <title>Abdul Rahman | Graphic Design Expert</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #f8fafc; color: #1e293b; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .hero-light { background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%); }
-        .card-style { background: #ffffff; border: 1px solid #e2e8f0; transition: 0.3s; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-        .card-style:hover { transform: translateY(-5px); border-color: #3b82f6; }
-        .star-color { color: #fbbf24; }
-        .admin-reply { background: #f0f7ff; border-left: 4px solid #3b82f6; padding: 10px; border-radius: 8px; font-size: 0.85rem; margin-top: 10px; text-align: left; }
+        body { background-color: #fafafa; color: #1a1a1a; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-bg { background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); }
+        /* Ab Blue ki jagah "Gold/Orange" aur "Dark Gray" ka combination */
+        .accent-color { color: #e67e22; }
+        .bg-accent { background-color: #e67e22; }
+        .border-accent { border-color: #e67e22; }
+        .card-style { background: #ffffff; border: 1px solid #e5e7eb; transition: 0.3s; }
+        .card-style:hover { transform: translateY(-5px); border-color: #e67e22; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .star-color { color: #f1c40f; }
+        .admin-reply { background: #fffcf0; border-left: 4px solid #e67e22; padding: 12px; border-radius: 8px; font-size: 0.85rem; margin-top: 10px; text-align: left; }
         .star-rating i { cursor: pointer; transition: 0.2s; }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-black text-blue-600 tracking-tighter italic">AR<span class="text-slate-800">DESIGN</span></h1>
-            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-slate-600">
-                <a href="#about" class="hover:text-blue-600 transition">Experience</a>
-                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
-                <a href="#projects" class="hover:text-blue-600 transition">Start Project</a>
-                <a href="#reviews-section" class="hover:text-blue-600 transition">Reviews</a>
+            <h1 class="text-2xl font-black text-gray-800 tracking-tighter italic underline decoration-orange-500">AR<span class="accent-color text-3xl">.</span></h1>
+            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-500">
+                <a href="#about" class="hover:text-orange-500 transition">Expertise</a>
+                <a href="#skills" class="hover:text-orange-500 transition">Skills</a>
+                <a href="#projects" class="hover:text-orange-500 transition">Inquiry</a>
+                <a href="#reviews-section" class="hover:text-orange-500 transition">Reviews</a>
             </div>
         </div>
     </nav>
 
-    <section id="about" class="hero-light pt-32 pb-20 px-6">
+    <section id="about" class="hero-bg pt-32 pb-20 px-6">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-3/5 text-center md:text-left">
-                <span class="text-blue-600 font-bold tracking-widest uppercase text-sm">Expert Graphic Designer</span>
-                <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mt-4 mb-6 leading-tight">Visual Excellence <br>By Abdul Rahman.</h1>
-                <p class="text-lg text-slate-600 mb-8 max-w-lg">I bring years of experience in creating high-impact visuals. Whether it's branding or social media, I ensure quality that speaks for itself.</p>
+                <span class="accent-color font-bold tracking-widest uppercase text-sm">Professional Graphic Designer</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 mt-4 mb-6 leading-tight tracking-tight">Crafting Visual <br>Stories.</h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-lg italic">"Hi, I am <b>Abdul Rahman</b>. With years of core experience in <b>Graphic Designing</b>, I transform ideas into stunning visual realities."</p>
                 <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                    <a href="#projects" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg">Start Project</a>
-                    <a href="https://wa.me/923065166406" class="bg-white text-slate-800 border border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition">WhatsApp</a>
+                    <a href="#projects" class="bg-gray-900 text-white px-8 py-4 rounded-full font-bold hover:bg-orange-600 transition shadow-lg">Start Project</a>
+                    <a href="https://wa.me/923065166406" class="bg-white text-gray-900 border border-gray-200 px-8 py-4 rounded-full font-bold hover:bg-gray-50 transition">Chat Now</a>
                 </div>
             </div>
             <div class="md:w-2/5">
-                <img src="abdul.jpg" onerror="this.src='https://via.placeholder.com/400x500?text=Abdul+Rahman'" class="rounded-[2.5rem] w-full shadow-2xl border-8 border-white">
+                <img src="abdul.jpg" onerror="this.src='https://via.placeholder.com/400x500?text=Abdul+Rahman'" class="rounded-[2rem] w-full shadow-2xl border-[12px] border-white">
             </div>
         </div>
     </section>
 
     <section id="skills" class="py-24 bg-white px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
-            <div class="card-style p-10 rounded-3xl">
-                <h3 class="text-2xl font-black mb-6 text-slate-900 border-l-4 border-blue-600 pl-4 uppercase tracking-tighter">DESIGN TOOLS</h3>
-                <p class="text-slate-700 leading-relaxed font-medium">Adobe Photoshop, Adobe Illustrator, Basic Figma, Adobe XD, Basic Adobe After Effects (Basic).</p>
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black uppercase italic decoration-orange-500 underline">Experience & Expertise</h2>
+                <p class="text-gray-500 mt-2">Specialized in High-End Graphic Design Solutions</p>
             </div>
-            <div class="card-style p-10 rounded-3xl">
-                <h3 class="text-2xl font-black mb-6 text-slate-900 border-l-4 border-blue-600 pl-4 uppercase tracking-tighter">DESIGN SKILLS</h3>
-                <p class="text-slate-700 leading-relaxed font-medium">Creative Visual Design, Social Media Graphics, Banner design, Instagram thumbnail design, Flyer design, Branding & Identity Design, Basic Video Editing.</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card-style p-10 rounded-2xl">
+                    <div class="bg-orange-100 w-12 h-12 flex items-center justify-center rounded-lg mb-6 accent-color text-2xl"><i class="fas fa-pen-nib"></i></div>
+                    <h3 class="text-xl font-black mb-4 uppercase">Design Tools</h3>
+                    <p class="text-gray-600 leading-relaxed">Adobe Photoshop (Expert), Adobe Illustrator (Pro), Figma, Adobe XD, and Basic After Effects for motion graphics.</p>
+                </div>
+                <div class="card-style p-10 rounded-2xl">
+                    <div class="bg-gray-100 w-12 h-12 flex items-center justify-center rounded-lg mb-6 text-gray-800 text-2xl"><i class="fas fa-layer-group"></i></div>
+                    <h3 class="text-xl font-black mb-4 uppercase">Design Skills</h3>
+                    <p class="text-gray-600 leading-relaxed">Social Media Graphics, Professional Banner Design, Instagram Thumbnails, Branding & Logo Identity, Flyer Design, and Basic Video Editing.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-24 bg-slate-50 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-black mb-12 text-slate-900 italic uppercase">START YOUR PROJECT</h2>
-            <form action="https://formspree.io/f/abdulrahmanniazi1234@gmail.com" method="POST" class="bg-white p-8 md:p-12 rounded-[2rem] shadow-xl text-left">
+    <section id="projects" class="py-24 bg-gray-50 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-black mb-12 italic uppercase tracking-tighter">Submit Your Inquiry</h2>
+            <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-sm border border-gray-100 text-left">
                 <div class="grid md:grid-cols-2 gap-6 mb-6">
-                    <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500">
-                    <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500">
+                    <input type="text" id="cust-name" placeholder="Full Name" class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-orange-500">
+                    <input type="tel" id="cust-phone" placeholder="Phone Number" class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-orange-500">
                 </div>
                 <div class="mb-6">
-                    <select name="service" class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500">
+                    <select id="cust-service" class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-orange-500">
                         <option>Social Media Graphics</option>
                         <option>Banner Design</option>
                         <option>Thumbnail Design</option>
-                        <option>Flyer Design</option>
-                        <option value="Other">OTHER (Details below)</option>
+                        <option>Logo/Branding</option>
+                        <option>Other</option>
                     </select>
                 </div>
-                <textarea name="details" rows="4" placeholder="Briefly describe your requirements..." required class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500 mb-6"></textarea>
-                <button type="submit" class="w-full bg-slate-900 text-white py-5 rounded-xl font-black uppercase tracking-widest hover:bg-blue-600 transition shadow-lg text-sm">Submit Project Inquiry</button>
-            </form>
+                <textarea id="cust-details" rows="4" placeholder="How can I help you today?" class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-orange-500 mb-6"></textarea>
+                
+                <button onclick="sendToWhatsApp()" class="w-full bg-gray-900 text-white py-5 rounded-xl font-bold uppercase tracking-widest hover:bg-orange-600 transition shadow-xl flex justify-center items-center gap-3">
+                    <i class="fab fa-whatsapp text-2xl"></i> Send to WhatsApp
+                </button>
+            </div>
         </div>
     </section>
 
     <section class="py-24 bg-white px-6">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-black text-center mb-12 italic uppercase">Frequently Asked Questions</h2>
-            <div class="space-y-6">
-                <div class="card-style p-6 rounded-2xl">
-                    <h4 class="font-bold text-slate-900 mb-2">How much experience do you have?</h4>
-                    <p class="text-slate-600 text-sm">I have professional experience in various design tools, delivering hundreds of projects to satisfied clients.</p>
-                </div>
-                <div class="card-style p-6 rounded-2xl">
-                    <h4 class="font-bold text-slate-900 mb-2">What is the typical turnaround time?</h4>
-                    <p class="text-slate-600 text-sm">Most designs are delivered within 24 to 48 hours depending on the complexity.</p>
-                </div>
+            <h2 class="text-3xl font-black text-center mb-12 uppercase italic">Work Questions</h2>
+            <div class="space-y-4">
+                <details class="group card-style p-6 rounded-xl cursor-pointer">
+                    <summary class="font-bold flex justify-between items-center list-none">
+                        What is your main expertise?
+                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600">Abdul Rahman specializes in high-quality <b>Graphic Designing</b> using professional Adobe tools to ensure brand growth.</p>
+                </details>
+                <details class="group card-style p-6 rounded-xl cursor-pointer">
+                    <summary class="font-bold flex justify-between items-center list-none">
+                        Do you provide revisions?
+                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600">Yes, client satisfaction is my priority. I provide multiple revisions until the design is perfect for you.</p>
+                </details>
             </div>
         </div>
     </section>
 
-    <section id="reviews-section" class="py-24 px-6 bg-slate-50 text-center">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-black mb-16 text-slate-900 italic uppercase">CLIENT FEEDBACK</h2>
-            
+    <section id="reviews-section" class="py-24 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-black mb-16 italic uppercase tracking-widest">Client Reviews</h2>
             <div id="reviews-list" class="grid md:grid-cols-3 gap-8 mb-16"></div>
 
-            <div class="max-w-xl mx-auto card-style p-8 rounded-3xl border-2 border-blue-100 shadow-2xl">
-                <h4 class="font-black mb-6 uppercase text-slate-800 tracking-widest">Leave Your Review</h4>
-                <div class="space-y-4">
-                    <input type="text" id="rev-name" placeholder="Your Name" class="w-full p-3 bg-slate-50 border rounded-lg outline-none">
-                    <div class="flex flex-col items-center">
-                        <div class="star-rating flex gap-2 text-2xl text-gray-300" id="star-box">
+            <div class="max-w-xl mx-auto bg-white p-8 rounded-3xl border border-gray-100 shadow-lg">
+                <h4 class="font-black mb-6 uppercase tracking-widest text-sm">Post a Review</h4>
+                <div class="space-y-4 text-left">
+                    <input type="text" id="rev-name" placeholder="Name" class="w-full p-3 bg-gray-50 border rounded-lg outline-none focus:border-orange-500">
+                    <div class="flex flex-col items-center py-2">
+                        <div class="star-rating flex gap-2 text-2xl text-gray-200" id="star-box">
                             <i class="fas fa-star" data-val="1"></i><i class="fas fa-star" data-val="2"></i><i class="fas fa-star" data-val="3"></i><i class="fas fa-star" data-val="4"></i><i class="fas fa-star" data-val="5"></i>
                         </div>
                         <input type="hidden" id="rev-rating" value="5">
                     </div>
-                    <textarea id="rev-text" placeholder="Share your experience..." class="w-full p-3 bg-slate-50 border rounded-lg outline-none"></textarea>
-                    <button onclick="postReview()" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-slate-900 transition uppercase text-xs tracking-widest">Post Review</button>
+                    <textarea id="rev-text" placeholder="Your feedback..." class="w-full p-3 bg-gray-50 border rounded-lg outline-none focus:border-orange-500"></textarea>
+                    <button onclick="postReview()" class="w-full bg-orange-600 text-white py-3 rounded-lg font-bold hover:bg-gray-900 transition uppercase text-xs tracking-widest">Publish Review</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 bg-slate-900 text-white text-center">
-        <h2 class="text-2xl font-black mb-4">ABDUL RAHMAN</h2>
-        <div class="flex justify-center gap-6 mb-8 text-xl">
-            <a href="https://wa.me/923065166406" class="hover:text-blue-400"><i class="fab fa-whatsapp"></i></a>
-            <a href="mailto:abdulrahmanniazi1234@gmail.com" class="hover:text-blue-400"><i class="fas fa-envelope"></i></a>
+    <footer class="py-16 bg-gray-900 text-white text-center">
+        <h2 class="text-3xl font-black italic mb-6">ABDUL <span class="accent-color">RAHMAN</span></h2>
+        <div class="flex justify-center gap-8 mb-10 text-2xl text-gray-400">
+            <a href="https://wa.me/923065166406" class="hover:text-orange-500"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:abdulrahmanniazi1234@gmail.com" class="hover:text-orange-500"><i class="fas fa-envelope"></i></a>
+            <a href="#" class="hover:text-orange-500"><i class="fab fa-behance"></i></a>
         </div>
-        <p class="text-[10px] text-slate-500 font-bold tracking-widest uppercase">© 2026 DESIGN EXCELLENCE | ALL RIGHTS RESERVED</p>
+        <p class="text-[10px] text-gray-500 font-bold tracking-[0.3em] uppercase">© 2026 Visual Storytelling Expert | All Rights Reserved</p>
     </footer>
 
     <script>
-        // Star Selection Logic
+        // WhatsApp Integration
+        function sendToWhatsApp() {
+            const name = document.getElementById('cust-name').value;
+            const phone = document.getElementById('cust-phone').value;
+            const service = document.getElementById('cust-service').value;
+            const details = document.getElementById('cust-details').value;
+            if(!name || !phone || !details) return alert("Please fill the details first!");
+
+            const myNum = "923065166406";
+            const msg = `*New Project Inquiry*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Details:* ${details}`;
+            window.open(`https://wa.me/${myNum}?text=${msg}`, '_blank').focus();
+        }
+
+        // Stars Logic
+        const stars = document.querySelectorAll('#star-box i');
+        const ratingVal = document.getElementById('rev-rating');
+        stars.forEach(s => s.addEventListener('click', () => {
+            ratingVal.value = s.getAttribute('data-val');
+            updateStars(ratingVal.value);
+        }));
+        function updateStars(v) {
+            stars.forEach(s => {
+                s.classList.toggle('star-color', s.getAttribute('data-val') <= v);
+                s.classList.toggle('text-gray-200', s.getAttribute('data-val') > v);
+            });
+        }
+
+        // Local Reviews & Admin Reply
+        function postReview() {
+            const name = document.getElementById('rev-name').value;
+            const text = document.getElementById('rev-text').value;
+            const rate = ratingVal.value;
+            if(!name || !text) return alert("Fill all fields!");
+
+            let reviews = JSON.parse(localStorage.getItem('ar_revs')) || [];
+            reviews.push({ name, text, rate, reply: "" });
+            localStorage.setItem('ar_revs', JSON.stringify(reviews));
+            document.getElementById('rev-name').value = "";
+            document.getElementById('rev-text').value = "";
+            renderReviews();
+        }
+
+        function renderReviews() {
+            const list = document.getElementById('reviews-list');
+            let reviews = JSON.parse(localStorage.getItem('ar_revs')) || [
+                {name: "Zeeshan Ali", text: "Quality designs by Abdul Rahman. Highly professional!", rate: 5, reply: "Thank you!"}
+            ];
+            list.innerHTML = "";
+            reviews.forEach((r, i) => {
+                let starH = "";
+                for(let j=1; j<=5; j++) starH += `<i class="fas fa-star ${j <= r.rate ? 'star-color' : 'text-gray-100'}"></i>`;
+                list.innerHTML += `
+                    <div class="card-style p-8 rounded-2xl text-center">
+                        <div class="mb-4 text-xs">${starH}</div>
+                        <p class="text-gray-600 italic mb-4 text-sm">"${r.text}"</p>
+                        <span class="font-bold text-gray-900 text-[10px] uppercase tracking-widest">- ${r.name}</span>
+                        ${r.reply ? `<div class="admin-reply"><strong>AR:</strong> ${r.reply}</div>` : ''}
+                        <button onclick="adminReply(${i})" class="text-[9px] text-orange-500 mt-4 block mx-auto underline uppercase font-bold">Admin Reply</button>
+                    </div>`;
+            });
+        }
+
+        function adminReply(i) {
+            const rep = prompt("Write your response as Abdul Rahman:");
+            if(rep) {
+                let revs = JSON.parse(localStorage.getItem('ar_revs')) || [];
+                revs[i].reply = rep;
+                localStorage.setItem('ar_revs', JSON.stringify(revs));
+                renderReviews();
+            }
+        }
+
+        window.onload = () => { renderReviews(); updateStars(5); };
+    </script>
+</body>
+</html>
