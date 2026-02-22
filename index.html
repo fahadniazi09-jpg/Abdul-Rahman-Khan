@@ -7,155 +7,157 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #ffffff; color: #000000; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .card-style { background: #ffffff; border: 1px solid #e5e7eb; transition: 0.3s; }
-        .card-style:hover { border-color: #000000; transform: translateY(-3px); }
-        .star-color { color: #000000; }
-        .admin-reply { background: #f9fafb; border-left: 3px solid #000000; padding: 10px; border-radius: 4px; font-size: 0.8rem; margin-top: 10px; text-align: left; }
-        .faq-item { border-bottom: 1px solid #f3f4f6; padding: 15px 0; }
+        body { background-color: #ffffff; color: #1e293b; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .accent-blue { color: #2563eb; }
+        .bg-accent-blue { background-color: #2563eb; }
+        .card-style { background: #ffffff; border: 1px solid #e2e8f0; transition: 0.3s; }
+        .card-style:hover { border-color: #2563eb; transform: translateY(-5px); box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1); }
+        .star-color { color: #2563eb; }
+        .admin-reply { background: #f0f9ff; border-left: 4px solid #2563eb; padding: 12px; border-radius: 8px; font-size: 0.85rem; margin-top: 10px; text-align: left; color: #1e3a8a; }
+        .star-rating i { cursor: pointer; transition: 0.2s; }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 bg-white border-b border-gray-100">
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-blue-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-black tracking-tighter italic text-black">AR<span class="text-gray-400">.</span></h1>
-            <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-widest text-gray-500">
-                <a href="#experience" class="hover:text-black transition">Experience</a>
-                <a href="#projects" class="hover:text-black transition">Order Now</a>
-                <a href="#faq" class="hover:text-black transition">FAQ</a>
-                <a href="#reviews-section" class="hover:text-black transition">Reviews</a>
+            <h1 class="text-2xl font-black text-blue-900 tracking-tighter italic">AR<span class="accent-blue text-3xl">.</span></h1>
+            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-slate-500">
+                <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Order Now</a>
+                <a href="#faq-section" class="hover:text-blue-600 transition">Q&A</a>
+                <a href="#reviews-section" class="hover:text-blue-600 transition">Reviews</a>
             </div>
         </div>
     </nav>
 
-    <section class="pt-32 pb-20 px-6">
+    <section class="pt-32 pb-20 px-6 bg-white">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-3/5 text-center md:text-left">
-                <span class="text-gray-400 font-bold tracking-[0.2em] uppercase text-xs">Graphic Design Portfolio</span>
-                <h1 class="text-5xl md:text-7xl font-black text-black mt-4 mb-6 leading-tight">Visual <br>Excellence.</h1>
-                <p class="text-lg text-gray-600 mb-8 max-w-lg">Hi, I am <b>Abdul Rahman</b>. Specialized in high-impact visuals that define modern brands through strategic design.</p>
+                <span class="text-blue-600 font-bold tracking-widest uppercase text-sm">Expert Graphic Designer</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mt-4 mb-6 leading-tight">Visual Storytelling <br>Specialist.</h1>
+                <p class="text-lg text-slate-600 mb-8 max-w-lg italic">"Hi, I am <b>Abdul Rahman</b>. I use my professional experience in Graphic Designing to create high-impact visuals."</p>
                 <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                    <a href="#projects" class="bg-black text-white px-8 py-4 rounded-full font-bold hover:bg-gray-800 transition">Start Project</a>
-                    <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" target="_blank" class="bg-white text-black border border-black px-8 py-4 rounded-full font-bold hover:bg-gray-50 transition">LinkedIn Profile</a>
+                    <a href="#projects" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100">Start Project</a>
+                    <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" target="_blank" class="bg-white text-blue-600 border border-blue-600 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition">LinkedIn Profile</a>
                 </div>
             </div>
             <div class="md:w-2/5">
-                <img src="abdul.jpg" onerror="this.src='https://via.placeholder.com/400x500?text=Abdul+Rahman'" class="rounded-2xl w-full shadow-xl border border-gray-100">
+                <img src="abdul.jpg" onerror="this.src='https://via.placeholder.com/400x500?text=Abdul+Rahman'" class="rounded-[2rem] w-full shadow-2xl border-[12px] border-blue-50">
             </div>
         </div>
     </section>
 
     <section id="experience" class="py-24 bg-white px-6">
         <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl font-black uppercase italic mb-12">Expertise</h2>
+            <h2 class="text-3xl font-black uppercase italic text-slate-900 mb-12">Experience & Expertise</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="card-style p-10 rounded-xl">
-                    <h3 class="text-lg font-black mb-4 uppercase tracking-widest">Software Tools</h3>
-                    <ul class="text-gray-500 space-y-3 text-sm font-medium">
-                        <li>Adobe Photoshop & Illustrator</li>
-                        <li>Figma & Adobe XD</li>
-                        <li>After Effects (Motion Graphics)</li>
+                <div class="card-style p-10 rounded-2xl">
+                    <div class="bg-blue-50 w-12 h-12 flex items-center justify-center rounded-lg mx-auto mb-6 accent-blue text-2xl"><i class="fas fa-layer-group"></i></div>
+                    <h3 class="text-xl font-black mb-4 uppercase">Design Tools</h3>
+                    <ul class="text-slate-600 space-y-2 font-medium">
+                        <li>Adobe Photoshop / Illustrator / Figma</li>
                     </ul>
                 </div>
-                <div class="card-style p-10 rounded-xl">
-                    <h3 class="text-lg font-black mb-4 uppercase tracking-widest">Core Skills</h3>
-                    <ul class="text-gray-500 space-y-3 text-sm font-medium">
-                        <li>Brand Identity & Logo Design</li>
-                        <li>Social Media & Ad Creatives</li>
-                        <li>Flyer & Banner Marketing</li>
+                <div class="card-style p-10 rounded-2xl">
+                    <div class="bg-blue-600 w-12 h-12 flex items-center justify-center rounded-lg mx-auto mb-6 text-white text-2xl"><i class="fas fa-palette"></i></div>
+                    <h3 class="text-xl font-black mb-4 uppercase">Design Skills</h3>
+                    <ul class="text-slate-600 space-y-2 font-medium">
+                        <li>Branding / Social Media / Flyers</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-24 bg-gray-50 px-6">
-        <div class="max-w-3xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-black uppercase italic">Place Your Order</h2>
-                <p class="text-gray-500 text-sm mt-2">Fill the form to start a conversation on WhatsApp.</p>
-            </div>
-            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-200">
+    <section id="projects" class="py-24 bg-white px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-black mb-12 italic uppercase text-slate-900">Order Your Project</h2>
+            <div class="bg-white p-8 md:p-12 rounded-[2.5rem] border-2 border-blue-50 shadow-xl shadow-blue-50 text-left">
                 <div class="grid md:grid-cols-2 gap-6 mb-6">
-                    <input type="text" id="cust-name" placeholder="Name" class="w-full p-4 border border-gray-200 rounded-lg focus:border-black outline-none transition">
-                    <input type="tel" id="cust-phone" placeholder="Phone" class="w-full p-4 border border-gray-200 rounded-lg focus:border-black outline-none transition">
+                    <input type="text" id="cust-name" placeholder="Full Name" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-blue-500">
+                    <input type="tel" id="cust-phone" placeholder="Phone Number" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-blue-500">
                 </div>
-                <select id="cust-service" class="w-full p-4 border border-gray-200 rounded-lg focus:border-black outline-none transition mb-6">
+                <select id="cust-service" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-blue-500 mb-6">
                     <option>Social Media Graphics</option>
                     <option>Banner Design</option>
-                    <option>Logo & Branding</option>
-                    <option>Video Editing</option>
+                    <option>Logo Design</option>
                 </select>
-                <textarea id="cust-details" rows="4" placeholder="Briefly explain your project..." class="w-full p-4 border border-gray-200 rounded-lg focus:border-black outline-none transition mb-6"></textarea>
+                <textarea id="cust-details" rows="4" placeholder="Describe your requirements..." class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-blue-500 mb-6"></textarea>
                 
-                <button onclick="sendToWhatsApp()" class="w-full bg-[#25D366] text-white py-4 rounded-lg font-bold uppercase tracking-widest hover:opacity-90 transition flex items-center justify-center gap-2">
-                    <i class="fab fa-whatsapp text-xl"></i> Inquiry on WhatsApp
+                <button onclick="sendToWhatsApp()" class="w-full bg-[#25D366] text-white py-5 rounded-xl font-bold uppercase tracking-widest hover:opacity-90 transition flex justify-center items-center gap-3">
+                    <i class="fab fa-whatsapp text-2xl"></i> Send Inquiry via WhatsApp
                 </button>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="py-24 bg-white px-6">
+    <section id="faq-section" class="py-24 bg-blue-50/30 px-6">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-black uppercase italic text-center mb-12">Questions & Answers</h2>
-            <div class="space-y-4">
-                <div class="faq-item">
-                    <h4 class="font-bold mb-2">1. How much time does a typical project take?</h4>
-                    <p class="text-gray-500 text-sm">Most social media graphics take 24-48 hours. Complex branding may take 3-5 days.</p>
+            <h2 class="text-3xl font-black uppercase italic text-center mb-12">Common Questions (Q&A)</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl border border-blue-100">
+                    <h4 class="font-bold text-blue-600 mb-2">Q: Project kitne time mein mil jaye ga?</h4>
+                    <p class="text-slate-600 text-sm">A: Normal design 24 se 48 ghanto mein deliver ho jata hai, depend karta hai kaam kitna hai.</p>
                 </div>
-                <div class="faq-item">
-                    <h4 class="font-bold mb-2">2. Do you provide source files?</h4>
-                    <p class="text-gray-500 text-sm">Yes, I provide high-quality PNG, JPG, and the original AI/PSD source files upon request.</p>
+                <div class="bg-white p-6 rounded-xl border border-blue-100">
+                    <h4 class="font-bold text-blue-600 mb-2">Q: Do you offer unlimited revisions?</h4>
+                    <p class="text-slate-600 text-sm">A: Yes, jab tak aap satisfy nahi hotay, main changes karta rehta hoon.</p>
                 </div>
-                <div class="faq-item">
-                    <h4 class="font-bold mb-2">3. Can you work on monthly retainers?</h4>
-                    <p class="text-gray-500 text-sm">Absolutely! I offer monthly packages for social media management and regular design needs.</p>
+                <div class="bg-white p-6 rounded-xl border border-blue-100">
+                    <h4 class="font-bold text-blue-600 mb-2">Q: Source file mile gi design ki?</h4>
+                    <p class="text-slate-600 text-sm">A: Bilkul, aapko original Illustrator ya Photoshop file bhi di jaye gi.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="reviews-section" class="py-24 px-6 bg-gray-50">
+    <section id="reviews-section" class="py-24 px-6 bg-white">
         <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl font-black uppercase italic mb-16">What Clients Say</h2>
+            <h2 class="text-4xl font-black mb-16 italic uppercase text-slate-900">Client Feedback</h2>
             <div id="reviews-list" class="grid md:grid-cols-3 gap-8 mb-16">
-                <div class="card-style p-8 rounded-xl bg-white">
+                <div class="card-style p-8 rounded-2xl">
                     <div class="mb-4 text-xs star-color"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-gray-600 italic mb-4 text-sm">"Incredible eye for detail. Abdul Rahman transformed our brand's social presence in just one week!"</p>
-                    <span class="font-bold text-[10px] uppercase tracking-widest">- Sarah J. (UK)</span>
+                    <p class="text-slate-600 italic mb-4 text-sm">"Bhai ka kaam bohat hi zabardast hai! Time pe delivery di aur design bhi top class tha."</p>
+                    <span class="font-bold text-slate-900 text-[10px] uppercase tracking-widest">- Usman Ali</span>
                 </div>
-                <div class="card-style p-8 rounded-xl bg-white">
+                <div class="card-style p-8 rounded-2xl">
                     <div class="mb-4 text-xs star-color"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-gray-600 italic mb-4 text-sm">"The flyer designs were professional and clean. Delivered exactly what I needed ahead of schedule."</p>
-                    <span class="font-bold text-[10px] uppercase tracking-widest">- Ahmed Malik (UAE)</span>
+                    <p class="text-slate-600 italic mb-4 text-sm">"Professional quality and very creative. Highly recommended for branding."</p>
+                    <span class="font-bold text-slate-900 text-[10px] uppercase tracking-widest">- Sara Khan</span>
                 </div>
-                <div class="card-style p-8 rounded-xl bg-white">
+                <div class="card-style p-8 rounded-2xl">
                     <div class="mb-4 text-xs star-color"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-gray-600 italic mb-4 text-sm">"Best communication I've had with a designer. He understands requirements very quickly."</p>
-                    <span class="font-bold text-[10px] uppercase tracking-widest">- Chris Evans (USA)</span>
+                    <p class="text-slate-600 italic mb-4 text-sm">"Design bohat pyara banaya hai, meri umeed se bhi zyada acha. Shukriya Abdul Rahman!"</p>
+                    <span class="font-bold text-slate-900 text-[10px] uppercase tracking-widest">- Kamran Lodhi</span>
                 </div>
             </div>
-            
-            <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl border border-gray-200">
-                <h4 class="font-black mb-6 uppercase text-xs tracking-widest">Leave a Review</h4>
+
+            <div class="max-w-xl mx-auto bg-blue-50/50 p-8 rounded-3xl border border-blue-100">
+                <h4 class="font-black mb-6 uppercase text-sm accent-blue tracking-widest">Post a Review</h4>
                 <div class="space-y-4 text-left">
-                    <input type="text" id="rev-name" placeholder="Your Name" class="w-full p-3 border rounded-lg outline-none focus:border-black">
-                    <textarea id="rev-text" placeholder="Your experience..." class="w-full p-3 border rounded-lg outline-none focus:border-black"></textarea>
-                    <button onclick="postReview()" class="w-full bg-black text-white py-3 rounded-lg font-bold hover:bg-gray-800 transition uppercase text-xs">Submit</button>
+                    <input type="text" id="rev-name" placeholder="Name" class="w-full p-3 bg-white border rounded-lg outline-none focus:border-blue-500">
+                    <div class="flex flex-col items-center py-2">
+                        <div class="star-rating flex gap-2 text-2xl text-slate-300" id="star-box">
+                            <i class="fas fa-star" data-val="1"></i><i class="fas fa-star" data-val="2"></i><i class="fas fa-star" data-val="3"></i><i class="fas fa-star" data-val="4"></i><i class="fas fa-star" data-val="5"></i>
+                        </div>
+                        <input type="hidden" id="rev-rating" value="5">
+                    </div>
+                    <textarea id="rev-text" placeholder="Apna experience likhen..." class="w-full p-3 bg-white border rounded-lg outline-none focus:border-blue-500"></textarea>
+                    <button onclick="postReview()" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition uppercase text-xs tracking-widest">Submit Review</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-16 bg-white border-t border-gray-100 text-center">
-        <h2 class="text-2xl font-black italic mb-6 tracking-tighter uppercase">ABDUL <span class="text-gray-400">RAHMAN</span></h2>
-        <div class="flex justify-center gap-8 mb-10 text-xl">
-            <a href="https://wa.me/923065166406" class="hover:text-green-500 transition"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" class="hover:text-blue-700 transition"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:abdulrahmanniazi1234@gmail.com" class="hover:text-gray-400 transition"><i class="fas fa-envelope"></i></a>
+    <footer class="py-16 bg-blue-900 text-white text-center">
+        <h2 class="text-3xl font-black italic mb-6 tracking-tighter uppercase">ABDUL <span class="accent-blue">RAHMAN</span></h2>
+        <div class="flex justify-center gap-8 mb-10 text-2xl">
+            <a href="https://wa.me/923065166406" class="hover:text-blue-400 transition"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" target="_blank" class="hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:abdulrahmanniazi1234@gmail.com" class="hover:text-blue-400 transition"><i class="fas fa-envelope"></i></a>
         </div>
-        <p class="text-[9px] text-gray-400 font-bold tracking-[0.3em] uppercase">© 2026 Minimal Portfolio | Designed for Quality</p>
+        <p class="text-[10px] text-blue-200 font-bold tracking-[0.3em] uppercase italic">© 2026 Graphic Design Assurance | Quality Guaranteed</p>
     </footer>
 
     <script>
@@ -165,27 +167,43 @@
             const service = document.getElementById('cust-service').value;
             const details = document.getElementById('cust-details').value;
             if(!name || !phone || !details) return alert("Please fill all details!");
-
             const msg = `*NEW DESIGN ORDER*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Details:* ${details}`;
             window.open(`https://wa.me/923065166406?text=${msg}`, '_blank');
+        }
+
+        const stars = document.querySelectorAll('#star-box i');
+        const ratingVal = document.getElementById('rev-rating');
+        stars.forEach(s => s.addEventListener('click', () => {
+            ratingVal.value = s.getAttribute('data-val');
+            updateStars(ratingVal.value);
+        }));
+        function updateStars(v) {
+            stars.forEach(s => {
+                s.classList.toggle('star-color', s.getAttribute('data-val') <= v);
+                s.classList.toggle('text-slate-300', s.getAttribute('data-val') > v);
+            });
         }
 
         function postReview() {
             const name = document.getElementById('rev-name').value;
             const text = document.getElementById('rev-text').value;
+            const rate = ratingVal.value;
             if(!name || !text) return alert("Fields cannot be empty!");
             
             const list = document.getElementById('reviews-list');
-            const newRev = `
-                <div class="card-style p-8 rounded-xl bg-white">
-                    <div class="mb-4 text-xs star-color"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-gray-600 italic mb-4 text-sm">"${text}"</p>
-                    <span class="font-bold text-[10px] uppercase tracking-widest">- ${name}</span>
+            let starH = "";
+            for(let j=1; j<=5; j++) starH += `<i class="fas fa-star ${j <= rate ? 'star-color' : 'text-slate-100'}"></i>`;
+            
+            list.innerHTML += `
+                <div class="card-style p-8 rounded-2xl text-center">
+                    <div class="mb-4 text-xs">${starH}</div>
+                    <p class="text-slate-600 italic mb-4 text-sm">"${text}"</p>
+                    <span class="font-bold text-slate-900 text-[10px] uppercase tracking-widest">- ${name}</span>
                 </div>`;
-            list.innerHTML += newRev;
             document.getElementById('rev-name').value = "";
             document.getElementById('rev-text').value = "";
         }
+        window.onload = () => { updateStars(5); };
     </script>
 </body>
 </html>
