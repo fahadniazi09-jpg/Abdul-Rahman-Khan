@@ -7,104 +7,160 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #ffffff; color: #1e293b; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .nav-link { transition: 0.3s; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
-        .nav-link:hover { color: #2563eb; }
-        .hero-section { min-height: 80vh; display: flex; align-items: center; }
-        .skill-card { border: 1px solid #f1f5f9; padding: 2rem; border-radius: 1.5rem; transition: 0.3s; }
-        .skill-card:hover { border-color: #2563eb; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(37, 99, 235, 0.05); }
-        .btn-submit { background-color: #1e3a8a; color: white; padding: 1.25rem; border-radius: 0.75rem; font-weight: 900; letter-spacing: 0.1em; transition: 0.3s; width: 100%; text-align: center; cursor: pointer; border: none; }
-        .btn-submit:hover { background-color: #172554; transform: translateY(-2px); }
-        .faq-item { border-bottom: 1px solid #f1f5f9; padding: 1.5rem 0; }
-        .profile-img-container { position: relative; width: 100%; max-width: 450px; margin: 0 auto; }
-        .profile-img-container img { width: 100%; border-radius: 2.5rem; border: 10px solid #ffffff; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); transition: 0.5s; }
-        .profile-img-container img:hover { transform: scale(1.02); }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
+        body { background-color: #ffffff; color: #1e293b; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        
+        /* Professional Hover Effects */
+        .skill-card { 
+            border: 1px solid #f1f5f9; 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .skill-card:hover { 
+            border-color: #2563eb; 
+            transform: translateY(-8px); 
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.08); 
+        }
+        
+        .btn-primary {
+            background-color: #1e3a8a;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px -5px rgba(30, 58, 138, 0.3);
+        }
+        .btn-primary:hover {
+            background-color: #172554;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 25px -5px rgba(30, 58, 138, 0.4);
+        }
+
+        /* Image Styling for Mobile/Desktop */
+        .hero-img-box {
+            position: relative;
+            z-index: 1;
+        }
+        .hero-img-box::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #2563eb;
+            border-radius: 2.5rem;
+            z-index: -1;
+            transition: 0.5s;
+        }
+        .hero-img-box:hover::after {
+            top: 10px;
+            right: -10px;
+        }
     </style>
 </head>
-<body>
+<body class="overflow-x-hidden">
 
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="text-2xl font-black italic tracking-tighter text-slate-900">AR<span class="text-blue-600">.</span></div>
-            <div class="hidden md:flex space-x-10">
-                <a href="#about" class="nav-link text-gray-500">About</a>
-                <a href="#skills" class="nav-link text-gray-500">Expertise</a>
-                <a href="#contact" class="nav-link text-gray-500">Hire Me</a>
-                <a href="#reviews" class="nav-link text-gray-500">Reviews</a>
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-lg border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 md:px-10 py-5 flex justify-between items-center">
+            <div class="text-2xl font-extrabold italic tracking-tighter text-slate-900">
+                AR<span class="text-blue-600">.</span>
+            </div>
+            <div class="flex space-x-6 md:space-x-10">
+                <a href="#about" class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-blue-600 transition">About</a>
+                <a href="#skills" class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-blue-600 transition">Skills</a>
+                <a href="#contact" class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-blue-600 transition">Hire Me</a>
             </div>
         </div>
     </nav>
 
-    <section id="about" class="hero-section pt-32 pb-20 px-6 bg-white">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4">Professional Graphic Designer</h2>
-                <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-tight mb-6">Abdul <br>Rahman.</h1>
-                <p class="text-lg text-slate-600 max-w-md italic mb-8 leading-relaxed">
-                    "I transform ideas into high-impact visual stories. Specialized in brand identity and social media excellence."
+    <section id="about" class="min-h-screen flex items-center pt-28 pb-16 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="order-2 lg:order-1 text-center lg:text-left">
+                <span class="inline-block px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Expert Graphic Designer</span>
+                <h1 class="text-5xl md:text-6xl lg:text-8xl font-black text-slate-900 leading-[1.1] mb-8">
+                    Abdul <br class="hidden lg:block"> Rahman.
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 max-w-xl mx-auto lg:mx-0 italic mb-10 leading-relaxed">
+                    "Main aapke ideas ko professional aur high-impact visual stories mein badalta hoon. Specialized in branding aur social media design."
                 </p>
-                <div class="flex gap-4">
-                    <a href="#contact" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100">Work With Me</a>
-                    <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" target="_blank" class="border border-slate-200 px-8 py-4 rounded-full font-bold hover:bg-slate-50 transition">LinkedIn</a>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-5">
+                    <a href="#contact" class="btn-primary px-10 py-5 rounded-2xl font-bold text-center">Start Project</a>
+                    <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" target="_blank" class="px-10 py-5 border-2 border-slate-200 rounded-2xl font-bold text-center hover:bg-slate-50 transition">LinkedIn Profile</a>
                 </div>
+            </div>
+
+            <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+                <div class="hero-img-box w-full max-w-[320px] md:max-w-[420px]">
+                    <img src="abdul.jpg" alt="Abdul Rahman" onerror="this.src='https://via.placeholder.com/500x600?text=Abdul+Rahman'" class="w-full h-auto rounded-[2.5rem] shadow-2xl object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-32 bg-slate-50/50 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-black uppercase italic text-slate-900">Expertise & Skills</h2>
+                <div class="h-1.5 w-24 bg-blue-600 mx-auto mt-6 rounded-full"></div>
             </div>
             
-            <div class="profile-img-container">
-                <img src="abdul.jpg" alt="Abdul Rahman" onerror="this.src='https://via.placeholder.com/500x600?text=Abdul+Rahman+Photo'">
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="py-24 bg-slate-50/50 px-6">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-black text-center uppercase italic mb-16">Skills & Tools</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="skill-card bg-white">
-                    <h3 class="text-blue-600 font-black uppercase text-xs tracking-widest mb-6">Design Tools</h3>
-                    <ul class="space-y-4 font-bold text-slate-700">
-                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Adobe Photoshop</li>
-                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Adobe Illustrator</li>
-                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Basic Figma</li>
-                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Adobe XD</li>
-                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Adobe After Effects (Basic)</li>
-                    </ul>
-                </div>
-                <div class="skill-card bg-white">
-                    <h3 class="text-blue-600 font-black uppercase text-xs tracking-widest mb-6">Design Skills</h3>
-                    <ul class="space-y-4 font-bold text-slate-700">
-                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Social Media & Thumbnails</li>
-                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Branding & Identity</li>
-                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Flyer & Banner Design</li>
-                        <li><i class="fas fa-check-circle mr-2 text-blue-600"></i> Basic Video Editing</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-24 bg-white px-6">
-        <div class="max-w-2xl mx-auto">
-            <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100">
-                <h2 class="text-3xl font-black text-center uppercase italic mb-8">Hire Me</h2>
-                <div class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <input type="text" id="name" placeholder="Full Name" class="w-full p-4 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
-                        <input type="tel" id="phone" placeholder="Phone Number" class="w-full p-4 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="skill-card bg-white p-10 rounded-[2rem]">
+                    <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-8">
+                        <i class="fas fa-tools"></i>
                     </div>
-                    <textarea id="msg" rows="4" placeholder="Briefly explain your project..." class="w-full p-4 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
-                    <button onclick="orderNow()" class="btn-submit uppercase tracking-widest">SUBMIT</button>
+                    <h3 class="text-2xl font-black mb-6 uppercase">Design Tools</h3>
+                    <div class="grid grid-cols-1 gap-4 font-bold text-slate-700">
+                        <span class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Adobe Photoshop</span>
+                        <span class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Adobe Illustrator</span>
+                        <span class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Basic Figma & XD</span>
+                        <span class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> After Effects (Basic)</span>
+                    </div>
+                </div>
+
+                <div class="skill-card bg-white p-10 rounded-[2rem]">
+                    <div class="w-14 h-14 bg-blue-900 rounded-2xl flex items-center justify-center text-white text-2xl mb-8">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-6 uppercase">Specialization</h3>
+                    <div class="grid grid-cols-1 gap-4 font-bold text-slate-700">
+                        <span class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Branding & Identity</span>
+                        <span class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Social Media & Thumbnails</span>
+                        <span class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Banner & Flyer Design</span>
+                        <span class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Video Editing (Basic)</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-slate-100 text-center">
-        <div class="flex justify-center gap-8 mb-6 text-xl text-slate-400">
+    <section id="contact" class="py-32 bg-white px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-slate-900 p-8 md:p-16 rounded-[3rem] text-center shadow-2xl relative overflow-hidden">
+                <div class="relative z-10">
+                    <h2 class="text-4xl md:text-5xl font-black text-white uppercase italic mb-8">Ready to work?</h2>
+                    <p class="text-slate-400 mb-12 text-lg">Details fill karen, main aapse jald rabta karunga.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <input type="text" id="name" placeholder="Full Name" class="w-full p-5 bg-white/5 border border-white/10 rounded-2xl text-white outline-none focus:border-blue-500 transition">
+                        <input type="tel" id="phone" placeholder="Phone Number" class="w-full p-5 bg-white/5 border border-white/10 rounded-2xl text-white outline-none focus:border-blue-500 transition">
+                    </div>
+                    <textarea id="msg" rows="4" placeholder="Briefly describe your project..." class="w-full p-5 bg-white/5 border border-white/10 rounded-2xl text-white outline-none focus:border-blue-500 transition mb-10"></textarea>
+                    
+                    <button onclick="orderNow()" class="w-full md:w-auto px-16 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-black uppercase tracking-[0.2em] shadow-xl transition">
+                        SUBMIT
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 border-t border-slate-100 text-center">
+        <div class="text-3xl font-black italic mb-10 text-slate-900">ABDUL <span class="text-blue-600">RAHMAN</span></div>
+        <div class="flex justify-center gap-10 mb-12 text-2xl text-slate-400">
             <a href="https://wa.me/923065166406" class="hover:text-blue-600 transition"><i class="fab fa-whatsapp"></i></a>
             <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" class="hover:text-blue-600 transition"><i class="fab fa-linkedin"></i></a>
             <a href="mailto:abdulrahmanniazi1234@gmail.com" class="hover:text-blue-600 transition"><i class="fas fa-envelope"></i></a>
         </div>
-        <p class="text-[9px] font-bold uppercase tracking-[0.4em] text-slate-300 italic">© 2026 ABDUL RAHMAN | MINIMAL PORTFOLIO</p>
+        <p class="text-[10px] font-extrabold uppercase tracking-[0.5em] text-slate-300">© 2026 Premium Portfolio Experience</p>
     </footer>
 
     <script>
@@ -112,8 +168,8 @@
             const n = document.getElementById('name').value;
             const p = document.getElementById('phone').value;
             const m = document.getElementById('msg').value;
-            if(!n || !p || !m) return alert("Please fill all details!");
-            const text = `*PORTFOLIO INQUIRY*%0A%0A*Name:* ${n}%0A*Phone:* ${p}%0A*Message:* ${m}`;
+            if(!n || !p || !m) return alert("Please fill all fields!");
+            const text = `*NEW PORTFOLIO INQUIRY*%0A%0A*Name:* ${n}%0A*Phone:* ${p}%0A*Details:* ${m}`;
             window.open(`https://wa.me/923065166406?text=${text}`, '_blank');
         }
     </script>
