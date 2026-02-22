@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Rahman | Design Maestro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(to right, #3b82f6, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .service-card { background: #0f0f0f; border: 1px solid #1f1f1f; transition: all 0.4s; }
+        .service-card:hover { border-color: #3b82f6; transform: translateY(-10px); background: #141414; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <h1 class="text-2xl font-black tracking-tighter italic">ABDUL<span class="text-blue-500">RAHMAN</span></h1>
+            <div class="hidden md:flex space-x-10 text-xs font-bold tracking-[0.2em] uppercase">
+                <a href="#services" class="hover:text-blue-500 transition">Expertise</a>
+                <a href="#project" class="hover:text-blue-500 transition">Start Project</a>
+                <a href="#reviews" class="hover:text-blue-500 transition">Testimonials</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-44 pb-24 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-3/5 text-center md:text-left">
+                <h2 class="text-blue-500 font-bold tracking-[0.3em] uppercase mb-4">Top Rated Creative</h2>
+                <h1 class="text-5xl md:text-8xl font-black mb-8 leading-[0.9]">Visuals That <br><span class="gradient-text">Command Attention.</span></h1>
+                <p class="text-gray-400 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
+                    Elevating brands through high-impact **Social Media Graphics**, **UI/UX Design**, and **Branding Identity**. I don't just design; I create experiences.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-5">
+                    <a href="#project" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-black uppercase text-sm transition shadow-2xl shadow-blue-600/20">Book a Service</a>
+                    <a href="https://wa.me/923065166406" class="border border-white/20 hover:bg-white hover:text-black px-10 py-4 rounded-full font-black uppercase text-sm transition">WhatsApp Me</a>
+                </div>
+            </div>
+            <div class="md:w-2/5">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                    <img src="profile.jpg" onerror="this.src='https://via.placeholder.com/500x600/0f0f0f/3b82f6?text=ABDUL+RAHMAN'" class="relative rounded-3xl w-full h-[500px] object-cover border border-white/10 shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-[#080808]">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-center text-4xl font-black mb-20 italic underline decoration-blue-600 underline-offset-8">Design Categories</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service-card p-10 rounded-3xl">
+                    <i class="fas fa-palette text-blue-500 text-4xl mb-6"></i>
+                    <h4 class="text-2xl font-bold mb-4">Graphic Design</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Specializing in **Posters**, **Banners**, and **Promotional Creatives** with a clean, modern style that ensures high-quality professional results.</p>
+                </div>
+                <div class="service-card p-10 rounded-3xl">
+                    <i class="fas fa-ux-policy text-blue-500 text-4xl mb-6"></i>
+                    <h4 class="text-2xl font-bold mb-4">UI/UX Design</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Crafting user-friendly apps and website designs using **Figma** and **Adobe XD**, focusing on original work and seamless user journeys.</p>
+                </div>
+                <div class="service-card p-10 rounded-3xl">
+                    <i class="fas fa-bullhorn text-blue-500 text-4xl mb-6"></i>
+                    <h4 class="text-2xl font-bold mb-4">Social Media</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">High-converting **Instagram Thumbnails**, **Content Creation**, and **Basic Video Editing** for maximum digital engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project" class="py-24 px-6 bg-blue-600 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-6xl font-black mb-6">Hire the Professional.</h2>
+            <p class="text-blue-100 mb-12 text-lg">Send your project details. I will receive them instantly on my admin email.</p>
+            
+            <form action="https://formspree.io/f/abdulrahmanniazi1234@gmail.com" method="POST" class="bg-black p-8 md:p-12 rounded-[2rem] shadow-2xl text-left space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-gray-500">Full Name</label>
+                        <input type="text" name="client_name" required class="w-full bg-[#111] border border-white/10 p-4 rounded-xl text-white focus:border-blue-500 outline-none">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-gray-500">Service Needed</label>
+                        <select name="service" class="w-full bg-[#111] border border-white/10 p-4 rounded-xl text-white outline-none">
+                            <option>Social Media Package</option>
+                            <option>UI/UX Prototyping</option>
+                            <option>Banner/Poster Design</option>
+                            <option>Complete Branding</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-xs font-bold uppercase tracking-widest text-gray-500">Project Brief</label>
+                    <textarea name="brief" rows="4" required class="w-full bg-[#111] border border-white/10 p-4 rounded-xl text-white focus:border-blue-500 outline-none" placeholder="Describe your vision..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 py-5 rounded-xl font-black uppercase tracking-widest hover:bg-white hover:text-blue-600 transition duration-500 shadow-xl shadow-blue-600/20">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-4xl font-black italic mb-16 text-center">What Clients <span class="text-blue-500">Say</span></h3>
+            
+            <div class="grid md:grid-cols-2 gap-10 mb-20">
+                <div class="bg-[#0f0f0f] p-8 rounded-3xl border border-white/5 relative">
+                    <i class="fas fa-quote-left absolute top-6 right-8 text-blue-500/20 text-5xl"></i>
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">"The attention to detail Abdul provides is phenomenal. Our social media engagement tripled after his redesign."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center font-bold">JD</div>
+                        <span class="font-bold text-white">James D., CEO</span>
+                    </div>
+                </div>
+                <div class="bg-[#0f0f0f] border border-dashed border-blue-500/30 p-8 rounded-3xl">
+                    <h4 class="text-xl font-bold mb-4 italic">Leave a Review</h4>
+                    <form action="https://formspree.io/f/abdulrahmanniazi1234@gmail.com" method="POST" class="space-y-4">
+                        <input type="text" name="reviewer" placeholder="Your Name" required class="w-full bg-black/50 border border-white/10 p-3 rounded-lg text-sm">
+                        <textarea name="feedback" placeholder="Your Review..." required class="w-full bg-black/50 border border-white/10 p-3 rounded-lg text-sm"></textarea>
+                        <button type="submit" class="text-blue-500 text-xs font-bold uppercase tracking-widest hover:text-white transition">Post Feedback →</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 border-t border-white/5 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-2xl font-black italic mb-8">ABDUL RAHMAN <span class="text-blue-500">KHAN</span></h2>
+            <div class="flex flex-wrap justify-center gap-8 mb-12">
+                <a href="https://wa.me/923065166406" class="flex items-center gap-2 hover:text-green-500 transition font-bold"><i class="fab fa-whatsapp"></i> +92 306 5166406</a>
+                <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" class="flex items-center gap-2 hover:text-blue-500 transition font-bold"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:abdulrahmanniazi1234@gmail.com" class="flex items-center gap-2 hover:text-red-500 transition font-bold"><i class="fas fa-envelope"></i> Email Me</a>
+            </div>
+            <p class="text-gray-600 text-[10px] uppercase font-bold tracking-[0.4em]">© 2026 Design Assurance & Quality • All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>
