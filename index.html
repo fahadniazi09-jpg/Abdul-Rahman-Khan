@@ -8,159 +8,128 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { background-color: #f8fafc; color: #1e293b; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .hero-light { background: linear-gradient(135deg, #e2e8f0 0%, #f8fafc 100%); }
+        .hero-light { background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%); }
         .card-style { background: #ffffff; border: 1px solid #e2e8f0; transition: 0.3s; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .card-style:hover { transform: translateY(-5px); border-color: #3b82f6; }
         .star-color { color: #fbbf24; }
+        .admin-reply { background: #f0f7ff; border-left: 4px solid #3b82f6; padding: 10px; border-radius: 8px; font-size: 0.85rem; margin-top: 10px; text-align: left; }
         .star-rating i { cursor: pointer; transition: 0.2s; }
-        .admin-reply { background: #eff6ff; border-left: 4px solid #3b82f6; margin-top: 10px; padding: 10px; border-radius: 8px; font-size: 0.85rem; }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-black text-blue-600 tracking-tighter italic">AR<span class="text-slate-800">DESIGN</span></h1>
             <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-slate-600">
+                <a href="#about" class="hover:text-blue-600 transition">Experience</a>
                 <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
-                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Start Project</a>
                 <a href="#reviews-section" class="hover:text-blue-600 transition">Reviews</a>
-                <a href="#projects" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">Hire Me</a>
             </div>
         </div>
     </nav>
 
-    <section class="pt-32 pb-10 text-center hero-light">
-        <h1 class="text-4xl font-black">ABDUL RAHMAN PORTFOLIO</h1>
-        <p class="text-slate-500">Reviews are now saved locally on this site!</p>
+    <section id="about" class="hero-light pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-3/5 text-center md:text-left">
+                <span class="text-blue-600 font-bold tracking-widest uppercase text-sm">Expert Graphic Designer</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mt-4 mb-6 leading-tight">Visual Excellence <br>By Abdul Rahman.</h1>
+                <p class="text-lg text-slate-600 mb-8 max-w-lg">I bring years of experience in creating high-impact visuals. Whether it's branding or social media, I ensure quality that speaks for itself.</p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="#projects" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg">Start Project</a>
+                    <a href="https://wa.me/923065166406" class="bg-white text-slate-800 border border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition">WhatsApp</a>
+                </div>
+            </div>
+            <div class="md:w-2/5">
+                <img src="abdul.jpg" onerror="this.src='https://via.placeholder.com/400x500?text=Abdul+Rahman'" class="rounded-[2.5rem] w-full shadow-2xl border-8 border-white">
+            </div>
+        </div>
     </section>
 
-    <section id="reviews-section" class="py-20 px-6 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-black text-center mb-16 text-slate-900 italic uppercase">CLIENT REVIEWS</h2>
-            
-            <div id="reviews-list" class="grid md:grid-cols-3 gap-8 mb-16">
+    <section id="skills" class="py-24 bg-white px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+            <div class="card-style p-10 rounded-3xl">
+                <h3 class="text-2xl font-black mb-6 text-slate-900 border-l-4 border-blue-600 pl-4 uppercase tracking-tighter">DESIGN TOOLS</h3>
+                <p class="text-slate-700 leading-relaxed font-medium">Adobe Photoshop, Adobe Illustrator, Basic Figma, Adobe XD, Basic Adobe After Effects (Basic).</p>
+            </div>
+            <div class="card-style p-10 rounded-3xl">
+                <h3 class="text-2xl font-black mb-6 text-slate-900 border-l-4 border-blue-600 pl-4 uppercase tracking-tighter">DESIGN SKILLS</h3>
+                <p class="text-slate-700 leading-relaxed font-medium">Creative Visual Design, Social Media Graphics, Banner design, Instagram thumbnail design, Flyer design, Branding & Identity Design, Basic Video Editing.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-slate-50 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-black mb-12 text-slate-900 italic uppercase">START YOUR PROJECT</h2>
+            <form action="https://formspree.io/f/abdulrahmanniazi1234@gmail.com" method="POST" class="bg-white p-8 md:p-12 rounded-[2rem] shadow-xl text-left">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500">
+                    <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500">
                 </div>
+                <div class="mb-6">
+                    <select name="service" class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500">
+                        <option>Social Media Graphics</option>
+                        <option>Banner Design</option>
+                        <option>Thumbnail Design</option>
+                        <option>Flyer Design</option>
+                        <option value="Other">OTHER (Details below)</option>
+                    </select>
+                </div>
+                <textarea name="details" rows="4" placeholder="Briefly describe your requirements..." required class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500 mb-6"></textarea>
+                <button type="submit" class="w-full bg-slate-900 text-white py-5 rounded-xl font-black uppercase tracking-widest hover:bg-blue-600 transition shadow-lg text-sm">Submit Project Inquiry</button>
+            </form>
+        </div>
+    </section>
 
-            <div class="max-w-xl mx-auto card-style p-8 rounded-3xl border-2 border-blue-50">
-                <h4 class="text-center font-black mb-6 uppercase text-slate-800 tracking-widest">Leave Your Review</h4>
-                <div class="space-y-4">
-                    <input type="text" id="reviewer-name" placeholder="Your Name" class="w-full p-3 bg-slate-50 border rounded-lg outline-none focus:border-blue-500">
-                    
-                    <div class="flex flex-col items-center">
-                        <div class="star-rating flex gap-2 text-2xl text-gray-300" id="star-container">
-                            <i class="fas fa-star" data-value="1"></i>
-                            <i class="fas fa-star" data-value="2"></i>
-                            <i class="fas fa-star" data-value="3"></i>
-                            <i class="fas fa-star" data-value="4"></i>
-                            <i class="fas fa-star" data-value="5"></i>
-                        </div>
-                        <input type="hidden" id="rating-val" value="5">
-                    </div>
-
-                    <textarea id="review-text" placeholder="Write your feedback..." class="w-full p-3 bg-slate-50 border rounded-lg outline-none focus:border-blue-500"></textarea>
-                    <button onclick="saveReview()" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-slate-900 transition uppercase tracking-widest">Post Review</button>
+    <section class="py-24 bg-white px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-black text-center mb-12 italic uppercase">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="card-style p-6 rounded-2xl">
+                    <h4 class="font-bold text-slate-900 mb-2">How much experience do you have?</h4>
+                    <p class="text-slate-600 text-sm">I have professional experience in various design tools, delivering hundreds of projects to satisfied clients.</p>
+                </div>
+                <div class="card-style p-6 rounded-2xl">
+                    <h4 class="font-bold text-slate-900 mb-2">What is the typical turnaround time?</h4>
+                    <p class="text-slate-600 text-sm">Most designs are delivered within 24 to 48 hours depending on the complexity.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <script>
-        // Star Logic
-        const stars = document.querySelectorAll('.star-rating i');
-        const ratingInput = document.getElementById('rating-val');
-
-        stars.forEach(star => {
-            star.addEventListener('click', () => {
-                const value = star.getAttribute('data-value');
-                ratingInput.value = value;
-                updateStars(value);
-            });
-        });
-
-        function updateStars(value) {
-            stars.forEach(s => {
-                if(s.getAttribute('data-value') <= value) {
-                    s.classList.add('active', 'star-color');
-                    s.classList.remove('text-gray-300');
-                } else {
-                    s.classList.remove('active', 'star-color');
-                    s.classList.add('text-gray-300');
-                }
-            });
-        }
-
-        // Save & Display Logic
-        function saveReview() {
-            const name = document.getElementById('reviewer-name').value;
-            const text = document.getElementById('review-text').value;
-            const rating = ratingInput.value;
-
-            if(!name || !text) { alert("Please fill all fields"); return; }
-
-            const newReview = {
-                name: name,
-                text: text,
-                rating: rating,
-                reply: ""
-            };
-
-            let reviews = JSON.parse(localStorage.getItem('myReviews')) || [];
-            reviews.push(newReview);
-            localStorage.setItem('myReviews', JSON.stringify(reviews));
+    <section id="reviews-section" class="py-24 px-6 bg-slate-50 text-center">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black mb-16 text-slate-900 italic uppercase">CLIENT FEEDBACK</h2>
             
-            // Clear fields
-            document.getElementById('reviewer-name').value = "";
-            document.getElementById('review-text').value = "";
-            
-            displayReviews();
-        }
+            <div id="reviews-list" class="grid md:grid-cols-3 gap-8 mb-16"></div>
 
-        function displayReviews() {
-            const list = document.getElementById('reviews-list');
-            let reviews = JSON.parse(localStorage.getItem('myReviews')) || [];
-            
-            // Default Reviews if empty
-            if(reviews.length === 0) {
-                reviews = [
-                    {name: "Ali Raza", text: "Zabardast kaam!", rating: 5, reply: "Shukriya Ali!"},
-                    {name: "Sarah K.", text: "Best designs!", rating: 5, reply: ""}
-                ];
-            }
-
-            list.innerHTML = "";
-            reviews.forEach((rev, index) => {
-                let starsHtml = "";
-                for(let i=1; i<=5; i++) {
-                    starsHtml += `<i class="fas fa-star ${i <= rev.rating ? 'star-color' : 'text-gray-200'}"></i>`;
-                }
-
-                list.innerHTML += `
-                    <div class="card-style p-6 rounded-2xl relative">
-                        <div class="flex justify-center mb-2 text-sm">${starsHtml}</div>
-                        <p class="text-slate-600 italic mb-2">"${rev.text}"</p>
-                        <span class="font-bold text-slate-900 text-xs">- ${rev.name}</span>
-                        ${rev.reply ? `<div class="admin-reply"><strong>Admin:</strong> ${rev.reply}</div>` : ''}
-                        
-                        <button onclick="addReply(${index})" class="text-[10px] text-blue-400 mt-4 block mx-auto underline">Admin Reply</button>
+            <div class="max-w-xl mx-auto card-style p-8 rounded-3xl border-2 border-blue-100 shadow-2xl">
+                <h4 class="font-black mb-6 uppercase text-slate-800 tracking-widest">Leave Your Review</h4>
+                <div class="space-y-4">
+                    <input type="text" id="rev-name" placeholder="Your Name" class="w-full p-3 bg-slate-50 border rounded-lg outline-none">
+                    <div class="flex flex-col items-center">
+                        <div class="star-rating flex gap-2 text-2xl text-gray-300" id="star-box">
+                            <i class="fas fa-star" data-val="1"></i><i class="fas fa-star" data-val="2"></i><i class="fas fa-star" data-val="3"></i><i class="fas fa-star" data-val="4"></i><i class="fas fa-star" data-val="5"></i>
+                        </div>
+                        <input type="hidden" id="rev-rating" value="5">
                     </div>
-                `;
-            });
-        }
+                    <textarea id="rev-text" placeholder="Share your experience..." class="w-full p-3 bg-slate-50 border rounded-lg outline-none"></textarea>
+                    <button onclick="postReview()" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-slate-900 transition uppercase text-xs tracking-widest">Post Review</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        function addReply(index) {
-            const replyText = prompt("Enter your reply as Admin:");
-            if(replyText) {
-                let reviews = JSON.parse(localStorage.getItem('myReviews')) || [];
-                reviews[index].reply = replyText;
-                localStorage.setItem('myReviews', JSON.stringify(reviews));
-                displayReviews();
-            }
-        }
+    <footer class="py-12 bg-slate-900 text-white text-center">
+        <h2 class="text-2xl font-black mb-4">ABDUL RAHMAN</h2>
+        <div class="flex justify-center gap-6 mb-8 text-xl">
+            <a href="https://wa.me/923065166406" class="hover:text-blue-400"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:abdulrahmanniazi1234@gmail.com" class="hover:text-blue-400"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="text-[10px] text-slate-500 font-bold tracking-widest uppercase">© 2026 DESIGN EXCELLENCE | ALL RIGHTS RESERVED</p>
+    </footer>
 
-        // Load reviews on start
-        window.onload = displayReviews;
-        updateStars(5);
-    </script>
-
-</body>
-</html>
+    <script>
+        // Star Selection Logic
