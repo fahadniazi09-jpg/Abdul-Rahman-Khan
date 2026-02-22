@@ -3,174 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdul Rahman | Graphic Portfolio</title>
+    <title>Abdul Rahman | Professional Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
         body { background-color: #ffffff; color: #1e293b; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         
-        /* Professional Hover Effects */
-        .skill-card { 
-            border: 1px solid #f1f5f9; 
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
-        }
-        .skill-card:hover { 
-            border-color: #2563eb; 
-            transform: translateY(-8px); 
-            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.08); 
-        }
-        
-        .btn-primary {
-            background-color: #1e3a8a;
-            color: white;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px -5px rgba(30, 58, 138, 0.3);
-        }
-        .btn-primary:hover {
-            background-color: #172554;
-            transform: translateY(-2px);
-            box-shadow: 0 15px 25px -5px rgba(30, 58, 138, 0.4);
+        .hero-image-frame {
+            position: relative;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+            border: 8px solid #ffffff;
         }
 
-        /* Image Styling for Mobile/Desktop */
-        .hero-img-box {
-            position: relative;
-            z-index: 1;
+        .btn-submit {
+            background-color: #1e3a8a;
+            color: white;
+            transition: 0.3s;
+            font-weight: 800;
+            letter-spacing: 1px;
         }
-        .hero-img-box::after {
-            content: '';
-            position: absolute;
-            top: 20px;
-            right: -20px;
-            width: 100%;
-            height: 100%;
-            border: 2px solid #2563eb;
-            border-radius: 2.5rem;
-            z-index: -1;
-            transition: 0.5s;
-        }
-        .hero-img-box:hover::after {
-            top: 10px;
-            right: -10px;
+        .btn-submit:hover {
+            background-color: #172554;
+            transform: translateY(-3px);
         }
     </style>
 </head>
-<body class="overflow-x-hidden">
+<body>
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-lg border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 md:px-10 py-5 flex justify-between items-center">
-            <div class="text-2xl font-extrabold italic tracking-tighter text-slate-900">
-                AR<span class="text-blue-600">.</span>
-            </div>
-            <div class="flex space-x-6 md:space-x-10">
-                <a href="#about" class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-blue-600 transition">About</a>
-                <a href="#skills" class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-blue-600 transition">Skills</a>
-                <a href="#contact" class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-blue-600 transition">Hire Me</a>
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="text-2xl font-black italic">AR<span class="text-blue-600">.</span></div>
+            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-slate-500">
+                <a href="#home">Home</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
     </nav>
 
-    <section id="about" class="min-h-screen flex items-center pt-28 pb-16 px-6">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-            <div class="order-2 lg:order-1 text-center lg:text-left">
-                <span class="inline-block px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Expert Graphic Designer</span>
-                <h1 class="text-5xl md:text-6xl lg:text-8xl font-black text-slate-900 leading-[1.1] mb-8">
-                    Abdul <br class="hidden lg:block"> Rahman.
-                </h1>
-                <p class="text-lg md:text-xl text-slate-600 max-w-xl mx-auto lg:mx-0 italic mb-10 leading-relaxed">
-                    "Main aapke ideas ko professional aur high-impact visual stories mein badalta hoon. Specialized in branding aur social media design."
+    <section id="home" class="pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="text-center lg:text-left order-2 lg:order-1">
+                <h2 class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4">Graphic Design Expert</h2>
+                <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-tight mb-6">Abdul <br>Rahman.</h1>
+                <p class="text-lg text-slate-600 mb-8 italic italic leading-relaxed">
+                    "High-impact visuals aur professional designs ke saath aapke brand ko naya look deta hoon."
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-5">
-                    <a href="#contact" class="btn-primary px-10 py-5 rounded-2xl font-bold text-center">Start Project</a>
-                    <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" target="_blank" class="px-10 py-5 border-2 border-slate-200 rounded-2xl font-bold text-center hover:bg-slate-50 transition">LinkedIn Profile</a>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#contact" class="bg-blue-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100">Hire Me</a>
+                    <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" target="_blank" class="border-2 border-slate-200 px-10 py-4 rounded-xl font-bold hover:bg-slate-50 transition">LinkedIn</a>
                 </div>
             </div>
 
-            <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
-                <div class="hero-img-box w-full max-w-[320px] md:max-w-[420px]">
-                    <img src="abdul.jpg" alt="Abdul Rahman" onerror="this.src='https://via.placeholder.com/500x600?text=Abdul+Rahman'" class="w-full h-auto rounded-[2.5rem] shadow-2xl object-cover">
+            <div class="flex justify-center order-1 lg:order-2">
+                <div class="hero-image-frame w-full max-w-[450px]">
+                    <img src="abdul.jpg" alt="Abdul Rahman" onerror="this.src='https://via.placeholder.com/500x600?text=Abdul+Rahman+Photo'" class="w-full h-auto object-cover">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-32 bg-slate-50/50 px-6">
+    <section id="skills" class="py-24 bg-slate-50 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-5xl font-black uppercase italic text-slate-900">Expertise & Skills</h2>
-                <div class="h-1.5 w-24 bg-blue-600 mx-auto mt-6 rounded-full"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="skill-card bg-white p-10 rounded-[2rem]">
-                    <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-8">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3 class="text-2xl font-black mb-6 uppercase">Design Tools</h3>
-                    <div class="grid grid-cols-1 gap-4 font-bold text-slate-700">
-                        <span class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Adobe Photoshop</span>
-                        <span class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Adobe Illustrator</span>
-                        <span class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Basic Figma & XD</span>
-                        <span class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> After Effects (Basic)</span>
-                    </div>
+            <h2 class="text-3xl font-black text-center uppercase italic mb-16">Design Expertise</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 hover:border-blue-500 transition">
+                    <h3 class="text-xl font-black mb-6 text-blue-900 uppercase">Design Tools</h3>
+                    <ul class="space-y-3 font-bold text-slate-600">
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Adobe Photoshop</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Adobe Illustrator</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Basic Figma & XD</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> After Effects (Basic)</li>
+                    </ul>
                 </div>
-
-                <div class="skill-card bg-white p-10 rounded-[2rem]">
-                    <div class="w-14 h-14 bg-blue-900 rounded-2xl flex items-center justify-center text-white text-2xl mb-8">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3 class="text-2xl font-black mb-6 uppercase">Specialization</h3>
-                    <div class="grid grid-cols-1 gap-4 font-bold text-slate-700">
-                        <span class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Branding & Identity</span>
-                        <span class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Social Media & Thumbnails</span>
-                        <span class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Banner & Flyer Design</span>
-                        <span class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Video Editing (Basic)</span>
-                    </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 hover:border-blue-500 transition">
+                    <h3 class="text-xl font-black mb-6 text-blue-900 uppercase">Special Skills</h3>
+                    <ul class="space-y-3 font-bold text-slate-600">
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Brand Identity Design</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Social Media & Thumbnails</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Banner & Flyer Design</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Basic Video Editing</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-32 bg-white px-6">
-        <div class="max-w-4xl mx-auto">
-            <div class="bg-slate-900 p-8 md:p-16 rounded-[3rem] text-center shadow-2xl relative overflow-hidden">
-                <div class="relative z-10">
-                    <h2 class="text-4xl md:text-5xl font-black text-white uppercase italic mb-8">Ready to work?</h2>
-                    <p class="text-slate-400 mb-12 text-lg">Details fill karen, main aapse jald rabta karunga.</p>
-                    
-                    <div class="grid md:grid-cols-2 gap-6 mb-6">
-                        <input type="text" id="name" placeholder="Full Name" class="w-full p-5 bg-white/5 border border-white/10 rounded-2xl text-white outline-none focus:border-blue-500 transition">
-                        <input type="tel" id="phone" placeholder="Phone Number" class="w-full p-5 bg-white/5 border border-white/10 rounded-2xl text-white outline-none focus:border-blue-500 transition">
-                    </div>
-                    <textarea id="msg" rows="4" placeholder="Briefly describe your project..." class="w-full p-5 bg-white/5 border border-white/10 rounded-2xl text-white outline-none focus:border-blue-500 transition mb-10"></textarea>
-                    
-                    <button onclick="orderNow()" class="w-full md:w-auto px-16 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-black uppercase tracking-[0.2em] shadow-xl transition">
-                        SUBMIT
-                    </button>
+    <section id="contact" class="py-24 bg-white px-6">
+        <div class="max-w-2xl mx-auto">
+            <div class="bg-slate-50 p-8 md:p-12 rounded-[3rem] border border-slate-200 shadow-xl">
+                <h2 class="text-3xl font-black text-center uppercase italic mb-10">Start a Project</h2>
+                <div class="space-y-6">
+                    <input type="text" id="name" placeholder="Your Name" class="w-full p-4 rounded-2xl border-none outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
+                    <input type="tel" id="phone" placeholder="Phone Number" class="w-full p-4 rounded-2xl border-none outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
+                    <textarea id="details" rows="4" placeholder="Describe your design needs..." class="w-full p-4 rounded-2xl border-none outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"></textarea>
+                    <button onclick="sendOrder()" class="w-full btn-submit py-5 rounded-2xl text-lg shadow-lg">SUBMIT</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 border-t border-slate-100 text-center">
-        <div class="text-3xl font-black italic mb-10 text-slate-900">ABDUL <span class="text-blue-600">RAHMAN</span></div>
-        <div class="flex justify-center gap-10 mb-12 text-2xl text-slate-400">
-            <a href="https://wa.me/923065166406" class="hover:text-blue-600 transition"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" class="hover:text-blue-600 transition"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:abdulrahmanniazi1234@gmail.com" class="hover:text-blue-600 transition"><i class="fas fa-envelope"></i></a>
+    <footer class="py-16 text-center border-t border-slate-100">
+        <div class="flex justify-center gap-8 mb-8 text-2xl text-slate-400">
+            <a href="https://wa.me/923065166406" class="hover:text-blue-600"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" class="hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:abdulrahmanniazi1234@gmail.com" class="hover:text-blue-600"><i class="fas fa-envelope"></i></a>
         </div>
-        <p class="text-[10px] font-extrabold uppercase tracking-[0.5em] text-slate-300">© 2026 Premium Portfolio Experience</p>
+        <p class="text-[10px] font-black uppercase tracking-[0.5em] text-slate-300">© 2026 Abdul Rahman | Quality Design</p>
     </footer>
 
     <script>
-        function orderNow() {
+        function sendOrder() {
             const n = document.getElementById('name').value;
             const p = document.getElementById('phone').value;
-            const m = document.getElementById('msg').value;
-            if(!n || !p || !m) return alert("Please fill all fields!");
-            const text = `*NEW PORTFOLIO INQUIRY*%0A%0A*Name:* ${n}%0A*Phone:* ${p}%0A*Details:* ${m}`;
-            window.open(`https://wa.me/923065166406?text=${text}`, '_blank');
+            const d = document.getElementById('details').value;
+            if(!n || !p || !d) return alert("Sari details bharein!");
+            const msg = `*PORTFOLIO INQUIRY*%0A%0A*Name:* ${n}%0A*Phone:* ${p}%0A*Details:* ${d}`;
+            window.open(`https://wa.me/923065166406?text=${msg}`, '_blank');
         }
     </script>
 </body>
