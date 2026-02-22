@@ -10,10 +10,9 @@
         body { background-color: #f8fafc; color: #1e293b; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .hero-light { background: linear-gradient(135deg, #e2e8f0 0%, #f8fafc 100%); }
         .card-style { background: #ffffff; border: 1px solid #e2e8f0; transition: 0.3s; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-        .card-style:hover { transform: translateY(-5px); border-color: #3b82f6; }
         .star-color { color: #fbbf24; }
         .star-rating i { cursor: pointer; transition: 0.2s; }
-        .star-rating i:hover, .star-rating i.active { color: #f59e0b; transform: scale(1.2); }
+        .admin-reply { background: #eff6ff; border-left: 4px solid #3b82f6; margin-top: 10px; padding: 10px; border-radius: 8px; font-size: 0.85rem; }
     </style>
 </head>
 <body>
@@ -24,99 +23,28 @@
             <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-slate-600">
                 <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
                 <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
-                <a href="#reviews" class="hover:text-blue-600 transition">Reviews</a>
+                <a href="#reviews-section" class="hover:text-blue-600 transition">Reviews</a>
                 <a href="#projects" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">Hire Me</a>
             </div>
         </div>
     </nav>
 
-    <section class="hero-light pt-32 pb-20 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-3/5 text-center md:text-left">
-                <span class="text-blue-600 font-bold tracking-widest uppercase text-sm">Professional Designer</span>
-                <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mt-4 mb-6 leading-tight">Visual Excellence <br>Guaranteed.</h1>
-                <p class="text-lg text-slate-600 mb-8 max-w-lg">Hi, I'm <span class="font-bold text-slate-900">Abdul Rahman</span>. I create impactful designs using industry-standard tools to help your brand stand out.</p>
-                <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                    <a href="#projects" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Start Project</a>
-                    <a href="https://wa.me/923065166406" class="bg-white text-slate-800 border border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition">WhatsApp</a>
-                </div>
-            </div>
-            <div class="md:w-2/5">
-                <img src="abdul.jpg" onerror="this.src='https://via.placeholder.com/400x500?text=Abdul+Rahman'" class="rounded-[2.5rem] w-full shadow-2xl border-8 border-white">
-            </div>
-        </div>
+    <section class="pt-32 pb-10 text-center hero-light">
+        <h1 class="text-4xl font-black">ABDUL RAHMAN PORTFOLIO</h1>
+        <p class="text-slate-500">Reviews are now saved locally on this site!</p>
     </section>
 
-    <section id="skills" class="py-24 bg-white px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
-            <div class="card-style p-10 rounded-3xl">
-                <h3 class="text-2xl font-black mb-6 text-slate-900 border-l-4 border-blue-600 pl-4 uppercase">Design Tools</h3>
-                <p class="text-slate-700 leading-relaxed font-medium">
-                    Adobe Photoshop, Adobe Illustrator, Basic Figma, Adobe XD, Basic Adobe After Effects (Basic).
-                </p>
-            </div>
-            <div class="card-style p-10 rounded-3xl">
-                <h3 class="text-2xl font-black mb-6 text-slate-900 border-l-4 border-blue-600 pl-4 uppercase">Design Skills</h3>
-                <p class="text-slate-700 leading-relaxed font-medium">
-                    Creative Visual Design, Social Media Graphics, Banner design, Instagram thumbnail design, Flyer design, Branding & Identity Design, Basic Video Editing.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="py-24 bg-slate-50 px-6">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-black text-center mb-12 text-slate-900 italic uppercase">START YOUR PROJECT</h2>
-            <form action="https://formspree.io/f/abdulrahmanniazi1234@gmail.com" method="POST" class="bg-white p-8 md:p-12 rounded-[2rem] shadow-xl border border-slate-100">
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-                    <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500">
-                    <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500">
-                </div>
-                <div class="mb-6">
-                    <label class="block text-xs font-bold uppercase mb-2 text-slate-400">Select Service</label>
-                    <select name="service" class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500">
-                        <option>Social Media Graphics</option>
-                        <option>Banner Design</option>
-                        <option>Instagram Thumbnail Design</option>
-                        <option>Flyer Design</option>
-                        <option>Branding & Identity</option>
-                        <option>Basic Video Editing</option>
-                        <option value="Other">OTHER (Write details below)</option>
-                    </select>
-                </div>
-                <textarea name="details" rows="4" placeholder="Describe your project requirements..." required class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500 mb-6"></textarea>
-                <button type="submit" class="w-full bg-slate-900 text-white py-5 rounded-xl font-black uppercase tracking-widest hover:bg-blue-600 transition shadow-lg">Submit Project Inquiry</button>
-                <p class="text-center text-xs text-slate-400 mt-4 italic font-bold">Note: You will get a response within 24 hours.</p>
-            </form>
-        </div>
-    </section>
-
-    <section id="reviews" class="py-24 px-6 bg-white">
+    <section id="reviews-section" class="py-20 px-6 bg-white">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-4xl font-black text-center mb-16 text-slate-900 italic uppercase">CLIENT REVIEWS</h2>
             
-            <div class="grid md:grid-cols-3 gap-8 mb-16 text-center">
-                <div class="card-style p-8 rounded-2xl">
-                    <div class="flex justify-center mb-4 star-color"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-slate-600 italic mb-4">"Zabardast kaam! Instagram thumbnails boht hi professional hain."</p>
-                    <span class="font-bold text-slate-900 uppercase text-xs tracking-tighter">- Ali Raza</span>
+            <div id="reviews-list" class="grid md:grid-cols-3 gap-8 mb-16">
                 </div>
-                <div class="card-style p-8 rounded-2xl">
-                    <div class="flex justify-center mb-4 star-color"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-slate-600 italic mb-4">"Best flyer design service. Highly recommended for branding."</p>
-                    <span class="font-bold text-slate-900 uppercase text-xs tracking-tighter">- Sarah K.</span>
-                </div>
-                <div class="card-style p-8 rounded-2xl">
-                    <div class="flex justify-center mb-4 star-color"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                    <p class="text-slate-600 italic mb-4">"Detailed work and very fast delivery. Great experience."</p>
-                    <span class="font-bold text-slate-900 uppercase text-xs tracking-tighter">- Ahmed J.</span>
-                </div>
-            </div>
 
             <div class="max-w-xl mx-auto card-style p-8 rounded-3xl border-2 border-blue-50">
                 <h4 class="text-center font-black mb-6 uppercase text-slate-800 tracking-widest">Leave Your Review</h4>
-                <form action="https://formspree.io/f/abdulrahmanniazi1234@gmail.com" method="POST" class="space-y-4">
-                    <input type="text" name="reviewer" placeholder="Your Name" required class="w-full p-3 bg-slate-50 border rounded-lg outline-none focus:border-blue-500">
+                <div class="space-y-4">
+                    <input type="text" id="reviewer-name" placeholder="Your Name" class="w-full p-3 bg-slate-50 border rounded-lg outline-none focus:border-blue-500">
                     
                     <div class="flex flex-col items-center">
                         <div class="star-rating flex gap-2 text-2xl text-gray-300" id="star-container">
@@ -126,52 +54,112 @@
                             <i class="fas fa-star" data-value="4"></i>
                             <i class="fas fa-star" data-value="5"></i>
                         </div>
-                        <input type="hidden" name="rating" id="rating-value" value="5">
-                        <span class="text-[10px] text-slate-400 mt-2 font-bold uppercase tracking-widest">Tap to Rate</span>
+                        <input type="hidden" id="rating-val" value="5">
                     </div>
 
-                    <textarea name="review" placeholder="Write your feedback..." required class="w-full p-3 bg-slate-50 border rounded-lg outline-none focus:border-blue-500"></textarea>
-                    <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-slate-900 transition uppercase tracking-widest">Submit Review</button>
-                </form>
+                    <textarea id="review-text" placeholder="Write your feedback..." class="w-full p-3 bg-slate-50 border rounded-lg outline-none focus:border-blue-500"></textarea>
+                    <button onclick="saveReview()" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-slate-900 transition uppercase tracking-widest">Post Review</button>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 bg-slate-900 text-white text-center">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-2xl font-black italic mb-4 uppercase tracking-tighter">ABDUL <span class="text-blue-500">RAHMAN</span></h2>
-            <div class="flex justify-center gap-8 mb-8">
-                <a href="https://wa.me/923065166406" class="hover:text-blue-400 transition"><i class="fab fa-whatsapp text-2xl"></i></a>
-                <a href="mailto:abdulrahmanniazi1234@gmail.com" class="hover:text-blue-400 transition"><i class="fas fa-envelope text-2xl"></i></a>
-                <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" class="hover:text-blue-400 transition"><i class="fab fa-linkedin text-2xl"></i></a>
-            </div>
-            <p class="text-slate-500 text-[10px] tracking-widest font-bold uppercase">© 2026 DESIGN ASSURANCE & QUALITY | ALL RIGHTS RESERVED</p>
-        </div>
-    </footer>
-
     <script>
+        // Star Logic
         const stars = document.querySelectorAll('.star-rating i');
-        const ratingInput = document.getElementById('rating-value');
+        const ratingInput = document.getElementById('rating-val');
 
         stars.forEach(star => {
             star.addEventListener('click', () => {
                 const value = star.getAttribute('data-value');
                 ratingInput.value = value;
-                
-                stars.forEach(s => {
-                    if(s.getAttribute('data-value') <= value) {
-                        s.classList.add('active', 'star-color');
-                        s.classList.remove('text-gray-300');
-                    } else {
-                        s.classList.remove('active', 'star-color');
-                        s.classList.add('text-gray-300');
-                    }
-                });
+                updateStars(value);
             });
         });
 
-        // Default: 5 stars active on load
-        stars.forEach(s => s.classList.add('active', 'star-color'));
+        function updateStars(value) {
+            stars.forEach(s => {
+                if(s.getAttribute('data-value') <= value) {
+                    s.classList.add('active', 'star-color');
+                    s.classList.remove('text-gray-300');
+                } else {
+                    s.classList.remove('active', 'star-color');
+                    s.classList.add('text-gray-300');
+                }
+            });
+        }
+
+        // Save & Display Logic
+        function saveReview() {
+            const name = document.getElementById('reviewer-name').value;
+            const text = document.getElementById('review-text').value;
+            const rating = ratingInput.value;
+
+            if(!name || !text) { alert("Please fill all fields"); return; }
+
+            const newReview = {
+                name: name,
+                text: text,
+                rating: rating,
+                reply: ""
+            };
+
+            let reviews = JSON.parse(localStorage.getItem('myReviews')) || [];
+            reviews.push(newReview);
+            localStorage.setItem('myReviews', JSON.stringify(reviews));
+            
+            // Clear fields
+            document.getElementById('reviewer-name').value = "";
+            document.getElementById('review-text').value = "";
+            
+            displayReviews();
+        }
+
+        function displayReviews() {
+            const list = document.getElementById('reviews-list');
+            let reviews = JSON.parse(localStorage.getItem('myReviews')) || [];
+            
+            // Default Reviews if empty
+            if(reviews.length === 0) {
+                reviews = [
+                    {name: "Ali Raza", text: "Zabardast kaam!", rating: 5, reply: "Shukriya Ali!"},
+                    {name: "Sarah K.", text: "Best designs!", rating: 5, reply: ""}
+                ];
+            }
+
+            list.innerHTML = "";
+            reviews.forEach((rev, index) => {
+                let starsHtml = "";
+                for(let i=1; i<=5; i++) {
+                    starsHtml += `<i class="fas fa-star ${i <= rev.rating ? 'star-color' : 'text-gray-200'}"></i>`;
+                }
+
+                list.innerHTML += `
+                    <div class="card-style p-6 rounded-2xl relative">
+                        <div class="flex justify-center mb-2 text-sm">${starsHtml}</div>
+                        <p class="text-slate-600 italic mb-2">"${rev.text}"</p>
+                        <span class="font-bold text-slate-900 text-xs">- ${rev.name}</span>
+                        ${rev.reply ? `<div class="admin-reply"><strong>Admin:</strong> ${rev.reply}</div>` : ''}
+                        
+                        <button onclick="addReply(${index})" class="text-[10px] text-blue-400 mt-4 block mx-auto underline">Admin Reply</button>
+                    </div>
+                `;
+            });
+        }
+
+        function addReply(index) {
+            const replyText = prompt("Enter your reply as Admin:");
+            if(replyText) {
+                let reviews = JSON.parse(localStorage.getItem('myReviews')) || [];
+                reviews[index].reply = replyText;
+                localStorage.setItem('myReviews', JSON.stringify(reviews));
+                displayReviews();
+            }
+        }
+
+        // Load reviews on start
+        window.onload = displayReviews;
+        updateStars(5);
     </script>
 
 </body>
