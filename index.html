@@ -3,194 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdul Rahman | Elite Design & UI/UX Studio</title>
+    <title>Abdul Rahman | Visual Storyteller</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #030712; color: #f3f4f6; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
-        .service-card { background: #111827; border: 1px solid #374151; transition: 0.4s; }
-        .service-card:hover { border-color: #3b82f6; transform: scale(1.02); }
-        .faq-item { background: #1f2937; border-radius: 12px; margin-bottom: 10px; padding: 15px; }
+        body { background-color: #f8fafc; color: #1e293b; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-light { background: linear-gradient(135deg, #e2e8f0 0%, #f8fafc 100%); }
+        .card-style { background: #ffffff; border: 1px solid #e2e8f0; transition: 0.3s; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .card-style:hover { transform: translateY(-5px); border-color: #3b82f6; }
+        .star-color { color: #fbbf24; }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 bg-[#030712]/90 backdrop-blur-md border-b border-gray-800">
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-black text-blue-500 tracking-tighter uppercase italic">AR<span class="text-white">Designs</span></h1>
-            <div class="hidden lg:flex space-x-8 text-xs font-bold uppercase tracking-widest">
-                <a href="#about" class="hover:text-blue-400 transition">Portfolio</a>
-                <a href="#services" class="hover:text-blue-400 transition">Services</a>
-                <a href="#order" class="hover:text-blue-400 transition text-blue-400">Order Now</a>
-                <a href="#reviews" class="hover:text-blue-400 transition">Testimonials</a>
-                <a href="#faq" class="hover:text-blue-400 transition">FAQ</a>
+            <h1 class="text-2xl font-black text-blue-600 tracking-tighter italic">AR<span class="text-slate-800">DESIGN</span></h1>
+            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-slate-600">
+                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+                <a href="#reviews" class="hover:text-blue-600 transition">Reviews</a>
+                <a href="#order" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">Hire Me</a>
             </div>
         </div>
     </nav>
 
-    <section class="pt-40 pb-20 px-6 gradient-bg">
+    <section class="hero-light pt-32 pb-20 px-6">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-3/5 text-center md:text-left">
-                <h2 class="text-blue-400 font-bold tracking-[0.4em] uppercase mb-4 text-sm">Official Design Partner</h2>
-                <h1 class="text-5xl md:text-8xl font-black mb-6 leading-tight uppercase">High End <br><span class="text-blue-500">Visual</span> Impact.</h1>
-                <p class="text-gray-400 text-lg mb-8 max-w-lg">
-                    I deliver **Design Assurance** through professional branding, user-centric interfaces, and viral social media assets. Every project is handled with 100% precision.
-                </p>
+                <span class="text-blue-600 font-bold tracking-widest uppercase text-sm">Professional Designer</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mt-4 mb-6 leading-tight">Visual Excellence <br>Guaranteed.</h1>
+                <p class="text-lg text-slate-600 mb-8 max-w-lg">Hi, I'm <span class="font-bold text-slate-900">Abdul Rahman</span>. I create impactful designs using industry-standard tools to help your brand stand out.</p>
                 <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                    <a href="#order" class="bg-blue-600 px-10 py-4 rounded-xl font-black uppercase text-xs tracking-widest hover:bg-blue-700 transition">Start A Project</a>
-                    <a href="https://wa.me/923065166406" class="border border-gray-600 px-10 py-4 rounded-xl font-black uppercase text-xs tracking-widest hover:bg-white hover:text-black transition">WhatsApp</a>
+                    <a href="#order" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Start Project</a>
+                    <a href="https://wa.me/923065166406" class="bg-white text-slate-800 border border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition">WhatsApp</a>
                 </div>
             </div>
-            <div class="md:w-2/5 flex justify-center">
-                <div class="relative">
-                    <div class="absolute -inset-2 bg-blue-600 blur-2xl opacity-20 rounded-full"></div>
-                    <img src="profile.jpg" onerror="this.src='https://via.placeholder.com/400x500/111827/3b82f6?text=Abdul+Rahman'" class="relative w-80 h-auto rounded-[2rem] border-2 border-blue-500/30">
-                </div>
+            <div class="md:w-2/5">
+                <img src="abdul.jpg" onerror="this.src='https://via.placeholder.com/400x500?text=Abdul+Rahman'" class="rounded-[2.5rem] w-full shadow-2xl border-8 border-white">
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-24 px-6 bg-[#030712]">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-black text-center mb-16 uppercase italic underline decoration-blue-600 underline-offset-8">Expertise & Solutions</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="service-card p-8 rounded-2xl">
-                    <i class="fas fa-image text-blue-500 text-3xl mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">Graphic Design</h3>
-                    <p class="text-gray-500 text-sm">Posters, Banners, Flyers, and High-Impact Ads.</p>
-                </div>
-                <div class="service-card p-8 rounded-2xl">
-                    <i class="fas fa-mobile-alt text-blue-500 text-3xl mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">UI/UX Design</h3>
-                    <p class="text-gray-500 text-sm">Web & Mobile Apps, Wireframes, Figma Prototypes.</p>
-                </div>
-                <div class="service-card p-8 rounded-2xl">
-                    <i class="fas fa-play text-blue-500 text-3xl mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">Social Media</h3>
-                    <p class="text-gray-500 text-sm">YT Thumbnails, Reels, Insta Posts, Marketing Kits.</p>
-                </div>
-                <div class="service-card p-8 rounded-2xl">
-                    <i class="fas fa-fingerprint text-blue-500 text-3xl mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">Branding</h3>
-                    <p class="text-gray-500 text-sm">Logos, Business Cards, Stationery, Brand Identity.</p>
-                </div>
+    <section id="skills" class="py-24 bg-white px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+            <div class="card-style p-10 rounded-3xl">
+                <h3 class="text-2xl font-black mb-6 text-slate-900 border-l-4 border-blue-600 pl-4 uppercase">Design Tools</h3>
+                <p class="text-slate-700 leading-relaxed font-medium">
+                    Adobe Photoshop, Adobe Illustrator, Basic Figma, Adobe XD, Basic Adobe After Effects (Basic).
+                </p>
+            </div>
+            <div class="card-style p-10 rounded-3xl">
+                <h3 class="text-2xl font-black mb-6 text-slate-900 border-l-4 border-blue-600 pl-4 uppercase">Design Skills</h3>
+                <p class="text-slate-700 leading-relaxed font-medium">
+                    Creative Visual Design, Social Media Graphics, Banner design, Instagram thumbnail design, Flyer design, Branding & Identity Design, Basic Video Editing.
+                </p>
             </div>
         </div>
     </section>
 
-    <section id="order" class="py-24 px-6 bg-slate-900">
+    <section id="projects" class="py-24 bg-slate-50 px-6">
         <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-5xl font-black mb-4 uppercase italic">Project Inquiry</h2>
-                <p class="text-blue-400 font-bold uppercase tracking-widest">Get a response within 24 Hours</p>
-            </div>
-            
-            <form action="https://formspree.io/f/abdulrahmanniazi1234@gmail.com" method="POST" class="space-y-6 bg-black/40 p-8 md:p-12 rounded-3xl border border-gray-800">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-xs font-black uppercase mb-2 text-gray-500 tracking-widest">Full Name</label>
-                        <input type="text" name="name" required class="w-full bg-gray-900 p-4 border border-gray-800 rounded-xl focus:border-blue-500 outline-none text-white">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-black uppercase mb-2 text-gray-500 tracking-widest">Phone / WhatsApp Number</label>
-                        <input type="tel" name="phone" required placeholder="+92 XXX XXXXXXX" class="w-full bg-gray-900 p-4 border border-gray-800 rounded-xl focus:border-blue-500 outline-none text-white">
-                    </div>
+            <h2 class="text-4xl font-black text-center mb-12 text-slate-900 italic">START YOUR PROJECT</h2>
+            <form action="https://formspree.io/f/abdulrahmanniazi1234@gmail.com" method="POST" class="bg-white p-8 md:p-12 rounded-[2rem] shadow-xl border border-slate-100">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500">
+                    <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500">
                 </div>
-
-                <div>
-                    <label class="block text-xs font-black uppercase mb-2 text-gray-500 tracking-widest">Select Your Project Type</label>
-                    <select name="service_type" class="w-full bg-gray-900 p-4 border border-gray-800 rounded-xl focus:border-blue-500 outline-none text-white appearance-none">
-                        <option>Poster / Banner Design</option>
-                        <option>UI/UX Design (Web/App)</option>
-                        <option>Social Media Marketing Pack</option>
-                        <option>YouTube/Instagram Thumbnails</option>
-                        <option>Company Branding & Logo</option>
+                <div class="mb-6">
+                    <label class="block text-xs font-bold uppercase mb-2 text-slate-400">Select Service</label>
+                    <select name="service" class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500">
+                        <option>Social Media Graphics</option>
+                        <option>Banner Design</option>
+                        <option>Instagram Thumbnail Design</option>
+                        <option>Flyer Design</option>
+                        <option>Branding & Identity</option>
                         <option>Basic Video Editing</option>
-                        <option value="Other">OTHER (Write below...)</option>
+                        <option value="Other">OTHER (Write details below)</option>
                     </select>
                 </div>
-
-                <div>
-                    <label class="block text-xs font-black uppercase mb-2 text-gray-500 tracking-widest">Project Details (If "Other", please specify)</label>
-                    <textarea name="message" rows="5" required placeholder="Describe your vision and requirements..." class="w-full bg-gray-900 p-4 border border-gray-800 rounded-xl focus:border-blue-500 outline-none text-white"></textarea>
-                </div>
-
-                <button type="submit" class="w-full bg-blue-600 text-white py-5 rounded-xl font-black uppercase tracking-[0.2em] text-sm hover:bg-white hover:text-black transition duration-500 shadow-xl shadow-blue-600/20">Send Project Details</button>
+                <textarea name="details" rows="4" placeholder="Describe your project requirements..." required class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500 mb-6"></textarea>
+                <button type="submit" class="w-full bg-slate-900 text-white py-5 rounded-xl font-black uppercase tracking-widest hover:bg-blue-600 transition shadow-lg">Submit Project Inquiry</button>
+                <p class="text-center text-xs text-slate-400 mt-4">Note: You will get a response within 24 hours.</p>
             </form>
         </div>
     </section>
 
-    <section id="faq" class="py-24 px-6">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-black text-center mb-12 italic uppercase">Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <h4 class="font-bold text-blue-400 mb-2">Kab tak reply milega?</h4>
-                <p class="text-gray-400 text-sm">Aapko 24 hours ke andar contact kar liya jayega aapke diye gaye number par.</p>
-            </div>
-            <div class="faq-item">
-                <h4 class="font-bold text-blue-400 mb-2">Project delivery time kya hai?</h4>
-                <p class="text-gray-400 text-sm">Har project ka time mukhtalif hota hai, lekin aam taur par 2-5 din mein delivery ho jati hai.</p>
-            </div>
-            <div class="faq-item">
-                <h4 class="font-bold text-blue-400 mb-2">Kya revisions allowed hain?</h4>
-                <p class="text-gray-400 text-sm">Ji haan, 100% satisfaction tak hum kaam par revisions dete hain.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="reviews" class="py-24 px-6 bg-[#080b14]">
+    <section id="reviews" class="py-24 px-6 bg-white">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-black text-center mb-16 italic uppercase">Client Wall of Fame</h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-                <div class="bg-gray-900 p-8 rounded-2xl border-t-4 border-blue-600">
-                    <p class="text-gray-400 italic mb-6">"Abdul's social media designs changed my brand image. Professional and very creative!"</p>
-                    <h5 class="font-bold">- Arsalan Khan, E-com Owner</h5>
+            <h2 class="text-4xl font-black text-center mb-16 text-slate-900 italic">CLIENT REVIEWS</h2>
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="card-style p-8 rounded-2xl">
+                    <div class="flex mb-4 star-color">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-4">"Zabardast kaam! Instagram thumbnails boht hi professional hain."</p>
+                    <span class="font-bold text-slate-900">- Ali Raza</span>
                 </div>
-                <div class="bg-gray-900 p-8 rounded-2xl border-t-4 border-blue-600">
-                    <p class="text-gray-400 italic mb-6">"Fastest UI/UX designer I've worked with. The Figma prototype was perfect."</p>
-                    <h5 class="font-bold">- Sarah Watson, Tech Startup</h5>
+                <div class="card-style p-8 rounded-2xl">
+                    <div class="flex mb-4 star-color">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-4">"Best flyer design service. Highly recommended for branding."</p>
+                    <span class="font-bold text-slate-900">- Sarah K.</span>
                 </div>
-                <div class="bg-gray-900 p-8 rounded-2xl border-t-4 border-blue-600">
-                    <p class="text-gray-400 italic mb-6">"The posters for our event were world-class. Everyone loved the style."</p>
-                    <h5 class="font-bold">- Event Master PK</h5>
-                </div>
-                <div class="bg-gray-900 p-8 rounded-2xl border-t-4 border-blue-600">
-                    <p class="text-gray-400 italic mb-6">"Exceptional thumbnails. My YouTube CTR jumped by 15%."</p>
-                    <h5 class="font-bold">- Gamer_Pro YT</h5>
-                </div>
-                <div class="bg-gray-900 p-8 rounded-2xl border-t-4 border-blue-600">
-                    <p class="text-gray-400 italic mb-6">"Quality design assurance and timely delivery. Highly recommended!"</p>
-                    <h5 class="font-bold">- Global Solutions Inc.</h5>
-                </div>
-                <div class="bg-gray-900 p-8 rounded-2xl border-t-4 border-blue-600">
-                    <p class="text-gray-400 italic mb-6">"Clear communication and original work. No templates used!"</p>
-                    <h5 class="font-bold">- Usman Ali, Marketing Lead</h5>
+                <div class="card-style p-8 rounded-2xl">
+                    <div class="flex mb-4 star-color">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-4">"Detailed work and very fast delivery. Great experience."</p>
+                    <span class="font-bold text-slate-900">- Ahmed J.</span>
                 </div>
             </div>
 
-            <div class="max-w-2xl mx-auto bg-blue-600 p-1 rounded-3xl">
-                <div class="bg-black p-10 rounded-[1.4rem]">
-                    <h4 class="text-2xl font-black mb-6 text-center italic">SUBMIT YOUR FEEDBACK</h4>
-                    <form action="https://formspree.io/f/abdulrahmanniazi1234@gmail.com" method="POST" class="space-y-4">
-                        <input type="text" name="reviewer_name" placeholder="Your Name" required class="w-full bg-gray-900 p-4 rounded-xl border border-gray-800 outline-none">
-                        <textarea name="client_review" placeholder="Share your experience..." required class="w-full bg-gray-900 p-4 rounded-xl border border-gray-800 outline-none"></textarea>
-                        <button type="submit" class="w-full bg-blue-600 py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-white hover:text-black transition">Post Review</button>
-                    </form>
-                </div>
+            <div class="max-w-xl mx-auto card-style p-8 rounded-3xl">
+                <h4 class="text-center font-bold mb-6">Leave Your Review</h4>
+                <form action="https://formspree.io/f/abdulrahmanniazi1234@gmail.com" method="POST" class="space-y-4">
+                    <input type="text" name="reviewer" placeholder="Your Name" class="w-full p-3 bg-slate-50 border rounded-lg outline-none">
+                    <div class="flex justify-center gap-2 star-color mb-2">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span class="text-xs text-slate-400 ml-2">(Select 5 Stars)</span>
+                    </div>
+                    <textarea name="review" placeholder="Write your feedback..." class="w-full p-3 bg-slate-50 border rounded-lg outline-none"></textarea>
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-slate-900 transition">Submit Review</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <footer class="py-16 text-center border-t border-gray-900">
-        <h2 class="text-3xl font-black italic text-blue-500 mb-6">ABDUL RAHMAN</h2>
-        <div class="flex flex-wrap justify-center gap-6 mb-10 font-bold text-sm">
-            <a href="https://wa.me/923065166406" class="text-green-500"><i class="fab fa-whatsapp"></i> +92 306 5166406</a>
-            <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" class="text-blue-400"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="mailto:abdulrahmanniazi1234@gmail.com" class="text-red-400"><i class="fas fa-envelope"></i> Email</a>
+    <footer class="py-12 bg-slate-900 text-white text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-2xl font-black italic mb-4">ABDUL RAHMAN</h2>
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="https://wa.me/923065166406" class="hover:text-blue-400 transition"><i class="fab fa-whatsapp text-xl"></i></a>
+                <a href="mailto:abdulrahmanniazi1234@gmail.com" class="hover:text-blue-400 transition"><i class="fas fa-envelope text-xl"></i></a>
+                <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" class="hover:text-blue-400 transition"><i class="fab fa-linkedin text-xl"></i></a>
+            </div>
+            <p class="text-slate-500 text-[10px] tracking-widest font-bold">© 2026 DESIGN ASSURANCE & QUALITY | ALL RIGHTS RESERVED</p>
         </div>
-        <p class="text-gray-600 text-[10px] tracking-[0.5em] font-black italic">© 2026 DESIGN ASSURANCE | PROFESSIONAL CREATIVE SERVICES</p>
     </footer>
 
 </body>
