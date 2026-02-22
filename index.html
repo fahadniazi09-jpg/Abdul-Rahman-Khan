@@ -10,24 +10,23 @@
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
         body { background-color: #ffffff; color: #1e293b; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         
-        .hero-image-frame {
+        .hero-img-box {
             position: relative;
-            border-radius: 2rem;
+            border-radius: 2.5rem;
             overflow: hidden;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
             border: 8px solid #ffffff;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
         }
-
+        
         .btn-submit {
             background-color: #1e3a8a;
             color: white;
             transition: 0.3s;
             font-weight: 800;
-            letter-spacing: 1px;
         }
         .btn-submit:hover {
             background-color: #172554;
-            transform: translateY(-3px);
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -36,33 +35,35 @@
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
             <div class="text-2xl font-black italic">AR<span class="text-blue-600">.</span></div>
-            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-slate-500">
-                <a href="#home">Home</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
+            <div class="flex space-x-8 text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                <a href="#about" class="hover:text-blue-600">About</a>
+                <a href="#skills" class="hover:text-blue-600">Expertise</a>
+                <a href="#contact" class="hover:text-blue-600">Hire</a>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="pt-32 pb-20 px-6">
+    <section id="about" class="pt-32 pb-20 px-6">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            <div class="text-center lg:text-left order-2 lg:order-1">
-                <h2 class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4">Graphic Design Expert</h2>
+            
+            <div class="order-2 lg:order-1 text-center lg:text-left">
+                <span class="text-blue-600 font-bold uppercase tracking-widest text-xs mb-4 inline-block">Professional Graphic Designer</span>
                 <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-tight mb-6">Abdul <br>Rahman.</h1>
-                <p class="text-lg text-slate-600 mb-8 italic italic leading-relaxed">
-                    "High-impact visuals aur professional designs ke saath aapke brand ko naya look deta hoon."
+                <p class="text-lg text-slate-600 mb-8 italic leading-relaxed">
+                    "Main aapke ideas ko professional aur high-impact visual designs mein badalta hoon."
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="#contact" class="bg-blue-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100">Hire Me</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100">Contact Me</a>
                     <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" target="_blank" class="border-2 border-slate-200 px-10 py-4 rounded-xl font-bold hover:bg-slate-50 transition">LinkedIn</a>
                 </div>
             </div>
 
-            <div class="flex justify-center order-1 lg:order-2">
-                <div class="hero-image-frame w-full max-w-[450px]">
+            <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+                <div class="hero-img-box w-full max-w-[420px]">
                     <img src="abdul.jpg" alt="Abdul Rahman" onerror="this.src='https://via.placeholder.com/500x600?text=Abdul+Rahman+Photo'" class="w-full h-auto object-cover">
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -70,8 +71,8 @@
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl font-black text-center uppercase italic mb-16">Design Expertise</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 hover:border-blue-500 transition">
-                    <h3 class="text-xl font-black mb-6 text-blue-900 uppercase">Design Tools</h3>
+                <div class="bg-white p-10 rounded-3xl border border-slate-100 hover:border-blue-500 transition duration-300">
+                    <h3 class="text-xl font-black mb-6 uppercase text-blue-900">Design Tools</h3>
                     <ul class="space-y-3 font-bold text-slate-600">
                         <li><i class="fas fa-check text-blue-600 mr-2"></i> Adobe Photoshop</li>
                         <li><i class="fas fa-check text-blue-600 mr-2"></i> Adobe Illustrator</li>
@@ -79,8 +80,8 @@
                         <li><i class="fas fa-check text-blue-600 mr-2"></i> After Effects (Basic)</li>
                     </ul>
                 </div>
-                <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 hover:border-blue-500 transition">
-                    <h3 class="text-xl font-black mb-6 text-blue-900 uppercase">Special Skills</h3>
+                <div class="bg-white p-10 rounded-3xl border border-slate-100 hover:border-blue-500 transition duration-300">
+                    <h3 class="text-xl font-black mb-6 uppercase text-blue-900">Design Skills</h3>
                     <ul class="space-y-3 font-bold text-slate-600">
                         <li><i class="fas fa-check text-blue-600 mr-2"></i> Brand Identity Design</li>
                         <li><i class="fas fa-check text-blue-600 mr-2"></i> Social Media & Thumbnails</li>
@@ -95,12 +96,12 @@
     <section id="contact" class="py-24 bg-white px-6">
         <div class="max-w-2xl mx-auto">
             <div class="bg-slate-50 p-8 md:p-12 rounded-[3rem] border border-slate-200 shadow-xl">
-                <h2 class="text-3xl font-black text-center uppercase italic mb-10">Start a Project</h2>
+                <h2 class="text-3xl font-black text-center uppercase italic mb-10">Hire Me</h2>
                 <div class="space-y-6">
-                    <input type="text" id="name" placeholder="Your Name" class="w-full p-4 rounded-2xl border-none outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
+                    <input type="text" id="name" placeholder="Name" class="w-full p-4 rounded-2xl border-none outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
                     <input type="tel" id="phone" placeholder="Phone Number" class="w-full p-4 rounded-2xl border-none outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
-                    <textarea id="details" rows="4" placeholder="Describe your design needs..." class="w-full p-4 rounded-2xl border-none outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"></textarea>
-                    <button onclick="sendOrder()" class="w-full btn-submit py-5 rounded-2xl text-lg shadow-lg">SUBMIT</button>
+                    <textarea id="msg" rows="4" placeholder="Your requirements..." class="w-full p-4 rounded-2xl border-none outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"></textarea>
+                    <button onclick="sendOrder()" class="w-full btn-submit py-5 rounded-2xl text-lg uppercase tracking-widest shadow-lg">SUBMIT</button>
                 </div>
             </div>
         </div>
@@ -112,17 +113,17 @@
             <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" class="hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
             <a href="mailto:abdulrahmanniazi1234@gmail.com" class="hover:text-blue-600"><i class="fas fa-envelope"></i></a>
         </div>
-        <p class="text-[10px] font-black uppercase tracking-[0.5em] text-slate-300">© 2026 Abdul Rahman | Quality Design</p>
+        <p class="text-[10px] font-black uppercase tracking-[0.5em] text-slate-300 italic">© 2026 Abdul Rahman Portfolio</p>
     </footer>
 
     <script>
         function sendOrder() {
             const n = document.getElementById('name').value;
             const p = document.getElementById('phone').value;
-            const d = document.getElementById('details').value;
-            if(!n || !p || !d) return alert("Sari details bharein!");
-            const msg = `*PORTFOLIO INQUIRY*%0A%0A*Name:* ${n}%0A*Phone:* ${p}%0A*Details:* ${d}`;
-            window.open(`https://wa.me/923065166406?text=${msg}`, '_blank');
+            const m = document.getElementById('msg').value;
+            if(!n || !p || !m) return alert("Details fill karein!");
+            const text = `*NEW INQUIRY*%0A%0A*Name:* ${n}%0A*Phone:* ${p}%0A*Message:* ${m}`;
+            window.open(`https://wa.me/923065166406?text=${text}`, '_blank');
         }
     </script>
 </body>
