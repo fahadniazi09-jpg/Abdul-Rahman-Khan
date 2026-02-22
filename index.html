@@ -3,117 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdul Rahman | Professional Portfolio</title>
+    <title>Abdul Rahman | Graphic Specialist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
-        body { background-color: #ffffff; color: #1e293b; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        body { background-color: #ffffff; color: #0f172a; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         
-        .hero-img-box {
-            position: relative;
-            border-radius: 2.5rem;
-            overflow: hidden;
-            border: 8px solid #ffffff;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        .hero-gradient {
+            background: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.05) 0%, transparent 50%);
         }
-        
-        .btn-submit {
+
+        .img-frame {
+            position: relative;
+            transition: 0.5s;
+        }
+        .img-frame::before {
+            content: '';
+            position: absolute;
+            inset: -10px;
+            border: 2px solid #2563eb;
+            border-radius: 2.5rem;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .btn-dark {
             background-color: #1e3a8a;
             color: white;
             transition: 0.3s;
-            font-weight: 800;
         }
-        .btn-submit:hover {
+        .btn-dark:hover {
             background-color: #172554;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.2);
         }
     </style>
 </head>
-<body>
+<body class="hero-gradient">
 
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="text-2xl font-black italic">AR<span class="text-blue-600">.</span></div>
-            <div class="flex space-x-8 text-[10px] font-bold uppercase tracking-widest text-slate-500">
-                <a href="#about" class="hover:text-blue-600">About</a>
-                <a href="#skills" class="hover:text-blue-600">Expertise</a>
-                <a href="#contact" class="hover:text-blue-600">Hire</a>
+            <div class="text-2xl font-black italic tracking-tighter">AR<span class="text-blue-600">.</span></div>
+            <div class="flex space-x-6 text-[10px] font-extrabold uppercase tracking-[0.2em] text-slate-400">
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="#expertise" class="hover:text-blue-600 transition">Skills</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <section id="about" class="pt-32 pb-20 px-6">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             
             <div class="order-2 lg:order-1 text-center lg:text-left">
-                <span class="text-blue-600 font-bold uppercase tracking-widest text-xs mb-4 inline-block">Professional Graphic Designer</span>
-                <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-tight mb-6">Abdul <br>Rahman.</h1>
-                <p class="text-lg text-slate-600 mb-8 italic leading-relaxed">
-                    "Main aapke ideas ko professional aur high-impact visual designs mein badalta hoon."
+                <div class="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6">
+                    Available for Projects
+                </div>
+                <h1 class="text-6xl md:text-8xl font-black text-slate-900 leading-[0.9] mb-8">
+                    Abdul <br>Rahman.
+                </h1>
+                <p class="text-lg md:text-xl text-slate-500 max-w-lg mb-10 italic leading-relaxed">
+                    "Graphic design sirf kaam nahi, mera passion hai. Main aapke brand ko wo professional look deta hoon jo market mein standout kare."
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="#contact" class="bg-blue-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100">Contact Me</a>
-                    <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" target="_blank" class="border-2 border-slate-200 px-10 py-4 rounded-xl font-bold hover:bg-slate-50 transition">LinkedIn</a>
+                <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                    <a href="#contact" class="btn-dark px-10 py-4 rounded-2xl font-bold uppercase text-xs tracking-widest">Start Project</a>
+                    <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" target="_blank" class="px-10 py-4 border-2 border-slate-200 rounded-2xl font-bold uppercase text-xs tracking-widest hover:bg-slate-50 transition">LinkedIn</a>
                 </div>
             </div>
 
             <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
-                <div class="hero-img-box w-full max-w-[420px]">
-                    <img src="abdul.jpg" alt="Abdul Rahman" onerror="this.src='https://via.placeholder.com/500x600?text=Abdul+Rahman+Photo'" class="w-full h-auto object-cover">
+                <div class="img-frame w-full max-w-[450px]">
+                    <img src="abdul.jpg" alt="Abdul Rahman" class="w-full h-auto object-cover rounded-[2rem] shadow-2xl border-8 border-white">
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section id="skills" class="py-24 bg-slate-50 px-6">
+    <section id="expertise" class="py-24 bg-slate-50/50 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-black text-center uppercase italic mb-16">Design Expertise</h2>
+            <h2 class="text-3xl font-black text-center uppercase italic mb-16 tracking-tighter text-slate-900">Expertise & Tools</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-10 rounded-3xl border border-slate-100 hover:border-blue-500 transition duration-300">
-                    <h3 class="text-xl font-black mb-6 uppercase text-blue-900">Design Tools</h3>
-                    <ul class="space-y-3 font-bold text-slate-600">
-                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Adobe Photoshop</li>
-                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Adobe Illustrator</li>
-                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Basic Figma & XD</li>
-                        <li><i class="fas fa-check text-blue-600 mr-2"></i> After Effects (Basic)</li>
+                <div class="bg-white p-12 rounded-[2.5rem] border border-slate-100 shadow-sm hover:border-blue-500 transition-all duration-500">
+                    <h3 class="text-blue-600 font-black uppercase text-xs tracking-[0.2em] mb-8">Design Stack</h3>
+                    <ul class="space-y-4 font-bold text-slate-700 text-lg">
+                        <li class="flex items-center"><i class="fas fa-square text-[8px] mr-4 text-blue-600"></i> Adobe Photoshop</li>
+                        <li class="flex items-center"><i class="fas fa-square text-[8px] mr-4 text-blue-600"></i> Adobe Illustrator</li>
+                        <li class="flex items-center"><i class="fas fa-square text-[8px] mr-4 text-blue-600"></i> Figma & Adobe XD</li>
+                        <li class="flex items-center"><i class="fas fa-square text-[8px] mr-4 text-blue-600"></i> After Effects (Basic)</li>
                     </ul>
                 </div>
-                <div class="bg-white p-10 rounded-3xl border border-slate-100 hover:border-blue-500 transition duration-300">
-                    <h3 class="text-xl font-black mb-6 uppercase text-blue-900">Design Skills</h3>
-                    <ul class="space-y-3 font-bold text-slate-600">
-                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Brand Identity Design</li>
-                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Social Media & Thumbnails</li>
-                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Banner & Flyer Design</li>
-                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Basic Video Editing</li>
+                <div class="bg-white p-12 rounded-[2.5rem] border border-slate-100 shadow-sm hover:border-blue-500 transition-all duration-500">
+                    <h3 class="text-blue-600 font-black uppercase text-xs tracking-[0.2em] mb-8">Creative Skills</h3>
+                    <ul class="space-y-4 font-bold text-slate-700 text-lg">
+                        <li class="flex items-center"><i class="fas fa-square text-[8px] mr-4 text-blue-600"></i> Social Media Graphics</li>
+                        <li class="flex items-center"><i class="fas fa-square text-[8px] mr-4 text-blue-600"></i> Branding & Identity</li>
+                        <li class="flex items-center"><i class="fas fa-square text-[8px] mr-4 text-blue-600"></i> Flyer & Banner Design</li>
+                        <li class="flex items-center"><i class="fas fa-square text-[8px] mr-4 text-blue-600"></i> Video Editing (Basic)</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-white px-6">
-        <div class="max-w-2xl mx-auto">
-            <div class="bg-slate-50 p-8 md:p-12 rounded-[3rem] border border-slate-200 shadow-xl">
-                <h2 class="text-3xl font-black text-center uppercase italic mb-10">Hire Me</h2>
-                <div class="space-y-6">
-                    <input type="text" id="name" placeholder="Name" class="w-full p-4 rounded-2xl border-none outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
-                    <input type="tel" id="phone" placeholder="Phone Number" class="w-full p-4 rounded-2xl border-none outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
-                    <textarea id="msg" rows="4" placeholder="Your requirements..." class="w-full p-4 rounded-2xl border-none outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"></textarea>
-                    <button onclick="sendOrder()" class="w-full btn-submit py-5 rounded-2xl text-lg uppercase tracking-widest shadow-lg">SUBMIT</button>
-                </div>
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-3xl mx-auto bg-slate-900 rounded-[3rem] p-10 md:p-16 text-center text-white shadow-2xl">
+            <h2 class="text-4xl font-black uppercase italic mb-6">Let's Create Something.</h2>
+            <p class="text-slate-400 mb-12">Details fill karen, main WhatsApp par aapse rabta karunga.</p>
+            
+            <div class="grid md:grid-cols-2 gap-4 mb-6">
+                <input type="text" id="name" placeholder="Name" class="w-full p-4 bg-white/10 rounded-xl border border-white/10 outline-none focus:border-blue-500 transition">
+                <input type="tel" id="phone" placeholder="Phone" class="w-full p-4 bg-white/10 rounded-xl border border-white/10 outline-none focus:border-blue-500 transition">
             </div>
+            <textarea id="msg" rows="3" placeholder="Project details..." class="w-full p-4 bg-white/10 rounded-xl border border-white/10 outline-none focus:border-blue-500 transition mb-8"></textarea>
+            
+            <button onclick="sendOrder()" class="w-full py-5 bg-blue-600 hover:bg-blue-700 rounded-xl font-black uppercase tracking-widest transition shadow-xl">
+                SUBMIT PROJECT
+            </button>
         </div>
     </section>
 
     <footer class="py-16 text-center border-t border-slate-100">
-        <div class="flex justify-center gap-8 mb-8 text-2xl text-slate-400">
-            <a href="https://wa.me/923065166406" class="hover:text-blue-600"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" class="hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:abdulrahmanniazi1234@gmail.com" class="hover:text-blue-600"><i class="fas fa-envelope"></i></a>
+        <div class="flex justify-center gap-10 mb-8 text-2xl text-slate-300">
+            <a href="https://wa.me/923065166406" class="hover:text-blue-600 transition"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" class="hover:text-blue-600 transition"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:abdulrahmanniazi1234@gmail.com" class="hover:text-blue-600 transition"><i class="fas fa-envelope"></i></a>
         </div>
-        <p class="text-[10px] font-black uppercase tracking-[0.5em] text-slate-300 italic">© 2026 Abdul Rahman Portfolio</p>
+        <p class="text-[9px] font-black uppercase tracking-[0.6em] text-slate-300 italic">© 2026 Abdul Rahman Portfolio Experience</p>
     </footer>
 
     <script>
@@ -121,8 +138,8 @@
             const n = document.getElementById('name').value;
             const p = document.getElementById('phone').value;
             const m = document.getElementById('msg').value;
-            if(!n || !p || !m) return alert("Details fill karein!");
-            const text = `*NEW INQUIRY*%0A%0A*Name:* ${n}%0A*Phone:* ${p}%0A*Message:* ${m}`;
+            if(!n || !p || !m) return alert("Please fill all fields!");
+            const text = `*NEW DESIGN INQUIRY*%0A%0A*Name:* ${n}%0A*Phone:* ${p}%0A*Details:* ${m}`;
             window.open(`https://wa.me/923065166406?text=${text}`, '_blank');
         }
     </script>
