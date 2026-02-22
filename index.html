@@ -12,6 +12,8 @@
         .card-style { background: #ffffff; border: 1px solid #e2e8f0; transition: 0.3s; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
         .card-style:hover { transform: translateY(-5px); border-color: #3b82f6; }
         .star-color { color: #fbbf24; }
+        .star-rating i { cursor: pointer; transition: 0.2s; }
+        .star-rating i:hover, .star-rating i.active { color: #f59e0b; transform: scale(1.2); }
     </style>
 </head>
 <body>
@@ -23,7 +25,7 @@
                 <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
                 <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
                 <a href="#reviews" class="hover:text-blue-600 transition">Reviews</a>
-                <a href="#order" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">Hire Me</a>
+                <a href="#projects" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">Hire Me</a>
             </div>
         </div>
     </nav>
@@ -35,7 +37,7 @@
                 <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mt-4 mb-6 leading-tight">Visual Excellence <br>Guaranteed.</h1>
                 <p class="text-lg text-slate-600 mb-8 max-w-lg">Hi, I'm <span class="font-bold text-slate-900">Abdul Rahman</span>. I create impactful designs using industry-standard tools to help your brand stand out.</p>
                 <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                    <a href="#order" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Start Project</a>
+                    <a href="#projects" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Start Project</a>
                     <a href="https://wa.me/923065166406" class="bg-white text-slate-800 border border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition">WhatsApp</a>
                 </div>
             </div>
@@ -64,7 +66,7 @@
 
     <section id="projects" class="py-24 bg-slate-50 px-6">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-black text-center mb-12 text-slate-900 italic">START YOUR PROJECT</h2>
+            <h2 class="text-4xl font-black text-center mb-12 text-slate-900 italic uppercase">START YOUR PROJECT</h2>
             <form action="https://formspree.io/f/abdulrahmanniazi1234@gmail.com" method="POST" class="bg-white p-8 md:p-12 rounded-[2rem] shadow-xl border border-slate-100">
                 <div class="grid md:grid-cols-2 gap-6 mb-6">
                     <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500">
@@ -84,64 +86,93 @@
                 </div>
                 <textarea name="details" rows="4" placeholder="Describe your project requirements..." required class="w-full p-4 bg-slate-50 border rounded-xl outline-none focus:border-blue-500 mb-6"></textarea>
                 <button type="submit" class="w-full bg-slate-900 text-white py-5 rounded-xl font-black uppercase tracking-widest hover:bg-blue-600 transition shadow-lg">Submit Project Inquiry</button>
-                <p class="text-center text-xs text-slate-400 mt-4">Note: You will get a response within 24 hours.</p>
+                <p class="text-center text-xs text-slate-400 mt-4 italic font-bold">Note: You will get a response within 24 hours.</p>
             </form>
         </div>
     </section>
 
     <section id="reviews" class="py-24 px-6 bg-white">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-black text-center mb-16 text-slate-900 italic">CLIENT REVIEWS</h2>
-            <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <h2 class="text-4xl font-black text-center mb-16 text-slate-900 italic uppercase">CLIENT REVIEWS</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16 text-center">
                 <div class="card-style p-8 rounded-2xl">
-                    <div class="flex mb-4 star-color">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
+                    <div class="flex justify-center mb-4 star-color"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     <p class="text-slate-600 italic mb-4">"Zabardast kaam! Instagram thumbnails boht hi professional hain."</p>
-                    <span class="font-bold text-slate-900">- Ali Raza</span>
+                    <span class="font-bold text-slate-900 uppercase text-xs tracking-tighter">- Ali Raza</span>
                 </div>
                 <div class="card-style p-8 rounded-2xl">
-                    <div class="flex mb-4 star-color">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
+                    <div class="flex justify-center mb-4 star-color"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     <p class="text-slate-600 italic mb-4">"Best flyer design service. Highly recommended for branding."</p>
-                    <span class="font-bold text-slate-900">- Sarah K.</span>
+                    <span class="font-bold text-slate-900 uppercase text-xs tracking-tighter">- Sarah K.</span>
                 </div>
                 <div class="card-style p-8 rounded-2xl">
-                    <div class="flex mb-4 star-color">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    </div>
+                    <div class="flex justify-center mb-4 star-color"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
                     <p class="text-slate-600 italic mb-4">"Detailed work and very fast delivery. Great experience."</p>
-                    <span class="font-bold text-slate-900">- Ahmed J.</span>
+                    <span class="font-bold text-slate-900 uppercase text-xs tracking-tighter">- Ahmed J.</span>
                 </div>
             </div>
 
-            <div class="max-w-xl mx-auto card-style p-8 rounded-3xl">
-                <h4 class="text-center font-bold mb-6">Leave Your Review</h4>
+            <div class="max-w-xl mx-auto card-style p-8 rounded-3xl border-2 border-blue-50">
+                <h4 class="text-center font-black mb-6 uppercase text-slate-800 tracking-widest">Leave Your Review</h4>
                 <form action="https://formspree.io/f/abdulrahmanniazi1234@gmail.com" method="POST" class="space-y-4">
-                    <input type="text" name="reviewer" placeholder="Your Name" class="w-full p-3 bg-slate-50 border rounded-lg outline-none">
-                    <div class="flex justify-center gap-2 star-color mb-2">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        <span class="text-xs text-slate-400 ml-2">(Select 5 Stars)</span>
+                    <input type="text" name="reviewer" placeholder="Your Name" required class="w-full p-3 bg-slate-50 border rounded-lg outline-none focus:border-blue-500">
+                    
+                    <div class="flex flex-col items-center">
+                        <div class="star-rating flex gap-2 text-2xl text-gray-300" id="star-container">
+                            <i class="fas fa-star" data-value="1"></i>
+                            <i class="fas fa-star" data-value="2"></i>
+                            <i class="fas fa-star" data-value="3"></i>
+                            <i class="fas fa-star" data-value="4"></i>
+                            <i class="fas fa-star" data-value="5"></i>
+                        </div>
+                        <input type="hidden" name="rating" id="rating-value" value="5">
+                        <span class="text-[10px] text-slate-400 mt-2 font-bold uppercase tracking-widest">Tap to Rate</span>
                     </div>
-                    <textarea name="review" placeholder="Write your feedback..." class="w-full p-3 bg-slate-50 border rounded-lg outline-none"></textarea>
-                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-slate-900 transition">Submit Review</button>
+
+                    <textarea name="review" placeholder="Write your feedback..." required class="w-full p-3 bg-slate-50 border rounded-lg outline-none focus:border-blue-500"></textarea>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-slate-900 transition uppercase tracking-widest">Submit Review</button>
                 </form>
             </div>
         </div>
     </section>
 
     <footer class="py-12 bg-slate-900 text-white text-center">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-2xl font-black italic mb-4">ABDUL RAHMAN</h2>
-            <div class="flex justify-center gap-6 mb-8">
-                <a href="https://wa.me/923065166406" class="hover:text-blue-400 transition"><i class="fab fa-whatsapp text-xl"></i></a>
-                <a href="mailto:abdulrahmanniazi1234@gmail.com" class="hover:text-blue-400 transition"><i class="fas fa-envelope text-xl"></i></a>
-                <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" class="hover:text-blue-400 transition"><i class="fab fa-linkedin text-xl"></i></a>
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-2xl font-black italic mb-4 uppercase tracking-tighter">ABDUL <span class="text-blue-500">RAHMAN</span></h2>
+            <div class="flex justify-center gap-8 mb-8">
+                <a href="https://wa.me/923065166406" class="hover:text-blue-400 transition"><i class="fab fa-whatsapp text-2xl"></i></a>
+                <a href="mailto:abdulrahmanniazi1234@gmail.com" class="hover:text-blue-400 transition"><i class="fas fa-envelope text-2xl"></i></a>
+                <a href="https://www.linkedin.com/in/abdulrahman-khan-graphic-designer" class="hover:text-blue-400 transition"><i class="fab fa-linkedin text-2xl"></i></a>
             </div>
-            <p class="text-slate-500 text-[10px] tracking-widest font-bold">© 2026 DESIGN ASSURANCE & QUALITY | ALL RIGHTS RESERVED</p>
+            <p class="text-slate-500 text-[10px] tracking-widest font-bold uppercase">© 2026 DESIGN ASSURANCE & QUALITY | ALL RIGHTS RESERVED</p>
         </div>
     </footer>
+
+    <script>
+        const stars = document.querySelectorAll('.star-rating i');
+        const ratingInput = document.getElementById('rating-value');
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const value = star.getAttribute('data-value');
+                ratingInput.value = value;
+                
+                stars.forEach(s => {
+                    if(s.getAttribute('data-value') <= value) {
+                        s.classList.add('active', 'star-color');
+                        s.classList.remove('text-gray-300');
+                    } else {
+                        s.classList.remove('active', 'star-color');
+                        s.classList.add('text-gray-300');
+                    }
+                });
+            });
+        });
+
+        // Default: 5 stars active on load
+        stars.forEach(s => s.classList.add('active', 'star-color'));
+    </script>
 
 </body>
 </html>
